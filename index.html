@@ -82,41 +82,32 @@
       .hero h1{font-size:30px; text-shadow:0 2px 0 rgba(0,0,0,.15);}
       .hero p{margin:6px 0 0; font-size:14.5px; font-weight:700; opacity:.95; line-height:1.4;}
       .hero{background:#14666c;border:3px solid rgba(255,255,255,.35);}
-      .hero::before{content:"";position:absolute;inset:-25%;background:linear-gradient(120deg,#0f766e,#1B7F86 35%,#7c3aed 75%,#E8823A 130%);z-index:0;animation:heroSlide 26s ease-in-out infinite alternate;will-change:transform;}
+      .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,#0f766e,#1B7F86 35%,#7c3aed 75%,#E8823A 130%);z-index:0;}
       .hero-char,.hero-text{position:relative;z-index:1;}
-      @keyframes heroSlide{from{transform:translate3d(-5%,-3%,0)}to{transform:translate3d(5%,3%,0)}}
-      .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.28) 50%,transparent 70%);transform:translateX(-120%);animation:heroShine 10s ease-in-out infinite;pointer-events:none;}
-      @keyframes heroShine{0%,55%{transform:translateX(-120%)}90%,100%{transform:translateX(120%)}}
       .hero-fx{position:absolute;inset:0;pointer-events:none;}
-      .hero-fx span{position:absolute;font-size:22px;opacity:.85;animation:tileFloat 8s ease-in-out infinite;will-change:transform;}
+      .hero-fx span{position:absolute;font-size:22px;opacity:.85;}
       .hero-fx span:nth-child(1){top:8px;right:14px;}
       .hero-fx span:nth-child(2){bottom:10px;right:64px;animation-delay:.7s;}
       .hero-fx span:nth-child(3){top:52%;right:6px;animation-delay:1.2s;font-size:18px;}
       .hero-fx span:nth-child(4){bottom:6px;left:120px;animation-delay:1.6s;font-size:16px;}
       .hero-fx span:nth-child(5){top:4px;left:44%;animation-delay:2s;font-size:18px;}
-      @keyframes tileFloat{0%,100%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(-4px) rotate(5deg)}}
       .hero-char{position:relative;flex:none;margin-top:30px;}
-      .hero-char img{width:132px;height:132px;object-fit:cover;object-position:top center;border-radius:26px;background:var(--cream);box-shadow:0 0 0 4px rgba(255,255,255,.85),0 10px 22px rgba(0,0,0,.35);cursor:pointer;animation:heroBob 7s ease-in-out infinite;will-change:transform;}
-      @keyframes heroBob{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-3px) rotate(1deg)}}
+      .hero-char img{width:132px;height:132px;object-fit:cover;object-position:top center;border-radius:26px;background:var(--cream);box-shadow:0 0 0 4px rgba(255,255,255,.85),0 10px 22px rgba(0,0,0,.35);cursor:pointer;}
       .hero-char img.boing{animation:heroBoing .55s ease;}
       @keyframes heroBoing{0%{transform:scale(1)}35%{transform:scale(1.12) rotate(-3deg)}70%{transform:scale(.94)}100%{transform:scale(1)}}
-      .hero-bubble{position:absolute;left:50%;top:-34px;transform:translateX(-50%) rotate(-2deg);background:#fff;color:#0f766e;font-weight:900;font-size:12.5px;padding:6px 10px;border-radius:12px;white-space:nowrap;box-shadow:0 4px 10px rgba(0,0,0,.25);animation:bubblePop 7s ease-in-out infinite;will-change:transform;}
+      .hero-bubble{position:absolute;left:50%;top:-34px;transform:translateX(-50%) rotate(-2deg);background:#fff;color:#0f766e;font-weight:900;font-size:12.5px;padding:6px 10px;border-radius:12px;white-space:nowrap;box-shadow:0 4px 10px rgba(0,0,0,.25);}
       .hero-bubble::after{content:"";position:absolute;left:50%;bottom:-6px;transform:translateX(-50%);border:6px solid transparent;border-top-color:#fff;border-bottom:0;}
-      @keyframes bubblePop{0%,100%{transform:translateX(-50%) rotate(-2deg) scale(1)}50%{transform:translateX(-50%) rotate(-2deg) scale(1.02)}}
       .hero-kicker{display:inline-block;background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:4px 10px;font-size:11.5px;font-weight:900;letter-spacing:1px;}
       .hero h1{font-size:34px;line-height:1.02;margin-top:8px;}
       .hero h1 span{background:linear-gradient(90deg,#ffd166,#ff8c1a);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 2px 0 rgba(0,0,0,.2));}
       .hero-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;}
-      .hero-chips .chip{background:rgba(255,255,255,.92);color:#0f766e;font-weight:900;font-size:12px;padding:5px 9px;border-radius:999px;box-shadow:0 3px 8px rgba(0,0,0,.2);animation:chipPop 7s ease-in-out infinite;will-change:transform;}
+      .hero-chips .chip{background:rgba(255,255,255,.92);color:#0f766e;font-weight:900;font-size:12px;padding:5px 9px;border-radius:999px;box-shadow:0 3px 8px rgba(0,0,0,.2);}
       .hero-chips .chip:nth-child(2){animation-delay:.5s;}
       .hero-chips .chip:nth-child(3){animation-delay:1s;}
-      @keyframes chipPop{0%,100%{transform:scale(1)}50%{transform:scale(1.02)}}
       .ready-meter{margin-top:10px;background:rgba(0,0,0,.3);border-radius:999px;padding:3px;}
       .ready-fill{position:relative;height:18px;border-radius:999px;background:linear-gradient(90deg,#ffd166,#ff8c1a);width:0;animation:meterFill 1.6s .3s ease forwards;overflow:hidden;}
-      .ready-fill::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.55) 50%,transparent 70%);transform:translateX(-120%);animation:meterShine 4.5s ease-in-out infinite;}
       .ready-fill b{position:relative;z-index:1;display:block;text-align:center;font-size:11px;line-height:18px;color:#4a2400;letter-spacing:1px;}
       @keyframes meterFill{to{width:100%}}
-      @keyframes meterShine{0%,60%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
       .xp-box{margin-top:14px; background:var(--card); border:2px solid var(--card-line); border-radius:var(--radius); padding:14px 16px; box-shadow:var(--shadow);}
       .xp-row{display:flex; justify-content:space-between; align-items:baseline; font-weight:800; font-size:14px;}
       .xp-row .xp-num{font-family:"Baloo 2",sans-serif; font-size:18px; color:var(--teal);}
@@ -333,12 +324,11 @@
         padding:9px 20px; border-radius:999px; box-shadow:var(--shadow); margin-top:8px;
       }
       .fail-progress{text-align:left; margin:14px auto 4px; max-width:340px; display:flex; flex-direction:column; gap:8px;}
-      .vote-grid{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:10px;}
-      .vote-btn{
-        background:var(--card); border:2.5px solid var(--card-line); border-radius:16px; padding:14px 8px;
-        font-family:"Baloo 2",sans-serif; font-weight:800; font-size:16px; color:var(--ink);
-      }
-      .vote-btn.chosen{border-color:var(--teal); background:var(--cream);}
+      .vote-free{display:flex; gap:10px; margin-top:10px;}
+      .vote-free input{flex:1; min-width:0; border:2.5px solid var(--card-line); border-radius:16px; padding:13px 14px;
+        font-family:"Nunito",sans-serif; font-weight:700; font-size:16px; color:var(--ink); background:var(--card);}
+      .vote-free input:focus{outline:none; border-color:var(--teal);}
+      .vote-free .btn{flex:0 0 auto; padding:13px 20px;}
       .confetti-bit{position:fixed; top:-14px; z-index:200; width:10px; height:15px; border-radius:2px; pointer-events:none; animation:confFall linear forwards;}
       @keyframes confFall{to{transform:translateY(105vh) rotate(720deg);}}
       .toast{
@@ -650,7 +640,10 @@
           <p>“Keren banget! Sekarang tiap lihat kulkas, kipas, sampai setrika, kamu tahu rahasia di dalamnya. Sampai ketemu di alat berikutnya!” — Enzi</p>
         </div>
         <h3 style="margin-top:18px; font-size:18px;">🗳️ Vote: alat apa yang Enzi bongkar berikutnya?</h3>
-        <div class="vote-grid" id="voteGrid"></div>
+        <div class="vote-free">
+          <input id="voteInput" type="text" maxlength="60" placeholder="Tulis alatnya di sini…" autocomplete="off">
+          <button class="btn orange" id="voteSend">Kirim</button>
+        </div>
         <div class="feedback good" id="voteFeedback"></div>
         <div class="btnrow">
           <button class="btn orange" id="certClose">Siap, Makasih Enzi!</button>
@@ -863,7 +856,7 @@
       .then(j => { if (j && j.levels) QUIZ_BANK = j; })
       .catch(()=>{});
 
-    const VOTE_OPTIONS = ["Blender","Remote","Lampu"];
+
     const XP_BY_STARS = { 1:25, 2:40, 3:60 };
 
     /* ==================== PROGRESS (localStorage) ==================== */
@@ -1560,66 +1553,89 @@
       return new Promise((resolve, reject)=>{
         const cv = document.createElement("canvas"); cv.width = 1080; cv.height = 1920;
         const c = cv.getContext("2d");
-        const g = c.createLinearGradient(0,0,0,1920);
-        g.addColorStop(0,"#0b1530"); g.addColorStop(1,"#18346e");
-        c.fillStyle = g; c.fillRect(0,0,1080,1920);
-        const cols = ["#ff8c1a","#2dd4bf","#ffd166","#ff6b9d","#7dd3fc","#a78bfa"];
-        for (let i=0;i<70;i++){
-          const x = Math.random()*1080, y = Math.random()*1920;
-          if (y > 300 && y < 1700 && x > 150 && x < 930 && Math.random() < 0.7) continue;
-          c.fillStyle = cols[i % cols.length];
-          c.beginPath(); c.arc(x, y, 5 + Math.random()*6, 0, 7); c.fill();
-        }
-        c.textAlign = "center"; c.textBaseline = "alphabetic";
         const F = (w,s)=> w + " " + s + "px 'Baloo 2','Nunito',sans-serif";
-        // header pill
-        c.fillStyle = "#ff8c1a"; rr(c,300,96,480,70,35); c.fill();
-        c.fillStyle = "#fff"; c.font = F(900,44); c.fillText("PUZZLE FRENZI", 540, 145);
-        // YAY!
-        c.font = F(900,210); c.lineWidth = 10; c.strokeStyle = "#78350f";
-        c.strokeText("YAY!", 540, 446); c.fillStyle = "#ffd166"; c.fillText("YAY!", 540, 446);
-        // subhead
-        c.fillStyle = "#fff"; c.font = F(800,64);
-        c.fillText("Aku berhasil jawab", 540, 536);
-        c.fillStyle = "#ffd166";
-        c.fillText("soal " + lv.id + " di Puzzle Frenzi!", 540, 626);
-        // Enzi badge (smaller, more air between components)
+        // ---- background: warm cream + subtle dot grid ----
+        const g = c.createLinearGradient(0,0,0,1920);
+        g.addColorStop(0,"#FFF6E5"); g.addColorStop(1,"#FFE9C9");
+        c.fillStyle = g; c.fillRect(0,0,1080,1920);
+        c.fillStyle = "rgba(232,130,58,0.045)";
+        for (let y=48; y<1920; y+=96) for (let x=48; x<1080; x+=96){ c.beginPath(); c.arc(x,y,3,0,7); c.fill(); }
+        function starPath(cx, cy, ro, ri){
+          c.beginPath();
+          for (let i=0;i<10;i++){
+            const r = i%2 ? ri : ro, a = -Math.PI/2 + i*Math.PI/5;
+            const x = cx + r*Math.cos(a), y = cy + r*Math.sin(a);
+            i ? c.lineTo(x,y) : c.moveTo(x,y);
+          }
+          c.closePath(); c.fill();
+        }
+        c.fillStyle = "#FFD166";
+        starPath(200,300,26,11); starPath(880,330,22,9); starPath(905,760,18,8); starPath(175,780,20,9);
+        c.textAlign = "center"; c.textBaseline = "alphabetic";
+        // ---- top pill ----
+        c.font = F(900,40);
+        const pillW = c.measureText("PUZZLE FRENZI").width + 64;
+        c.save();
+        c.shadowColor = "rgba(20,33,61,0.12)"; c.shadowBlur = 16; c.shadowOffsetY = 6;
+        c.fillStyle = "#fff"; rr(c,(1080-pillW)/2,88,pillW,68,34); c.fill();
+        c.restore();
+        c.fillStyle = "#E8823A"; c.fillText("PUZZLE FRENZI", 540, 135);
+        // ---- Enzi badge (bigger) ----
         const heroImg = document.getElementById("heroEnzi");
-        c.fillStyle = "#ff8c1a"; c.beginPath(); c.arc(540,930,220,0,7); c.fill();
-        c.fillStyle = "#142142"; c.beginPath(); c.arc(540,930,206,0,7); c.fill();
-        c.save(); c.beginPath(); c.arc(540,930,202,0,7); c.clip();
+        c.save();
+        c.shadowColor = "rgba(20,33,61,0.25)"; c.shadowBlur = 36; c.shadowOffsetY = 14;
+        c.fillStyle = "#FF8C1A"; c.beginPath(); c.arc(540,520,290,0,7); c.fill();
+        c.restore();
+        c.fillStyle = "#fff"; c.beginPath(); c.arc(540,520,276,0,7); c.fill();
+        c.save(); c.beginPath(); c.arc(540,520,272,0,7); c.clip();
         if (heroImg && heroImg.complete && heroImg.naturalWidth){
           const w = heroImg.naturalWidth, h = heroImg.naturalHeight, ss = w*0.64;
-          c.drawImage(heroImg, w*0.18, h*0.04, ss, ss, 334, 724, 412, 412);
-        } else { c.fillStyle = "#e8e8e8"; c.fillRect(334,724,412,412); }
+          c.drawImage(heroImg, w*0.18, h*0.04, ss, ss, 268, 248, 544, 544);
+        } else { c.fillStyle = "#e8e8e8"; c.fillRect(268,248,544,544); }
         c.restore();
-        // level chip
+        // ---- headline + subline ----
+        c.fillStyle = "#14213D"; c.font = F(900,104);
+        c.fillText("YAY, BERHASIL!", 540, 950);
+        c.font = F(700,48);
+        c.fillText("Aku berhasil jawab", 540, 1035);
+        c.fillStyle = "#E8823A";
+        c.fillText("soal " + lv.id + " di Puzzle Frenzi!", 540, 1100);
+        // ---- white result card ----
+        c.save();
+        c.shadowColor = "rgba(20,33,61,0.14)"; c.shadowBlur = 28; c.shadowOffsetY = 10;
+        c.fillStyle = "#fff"; rr(c,90,1180,900,460,40); c.fill();
+        c.restore();
         const chip = "LEVEL " + lv.id + "  ·  " + lv.alat.toUpperCase();
-        c.font = F(900,46); const cw = c.measureText(chip).width + 80;
-        c.fillStyle = "#2dd4bf"; rr(c,(1080-cw)/2,1210,cw,82,41); c.fill();
-        c.fillStyle = "#08202c"; c.fillText(chip, 540, 1268);
-        // white result container: label -> duration -> stars
-        c.fillStyle = "#fff"; rr(c,140,1340,800,300,36); c.fill();
-        c.fillStyle = "#64748b"; c.font = F(800,40);
-        c.fillText("WAKTU JAWAB", 540, 1412);
+        c.font = F(900,40); const cw = c.measureText(chip).width + 72;
+        c.fillStyle = "#2DD4BF"; rr(c,(1080-cw)/2,1222,cw,68,34); c.fill();
+        c.fillStyle = "#08202C"; c.fillText(chip, 540, 1268);
+        // duration
         const num = String(secs);
-        c.font = F(900,130); const numW = c.measureText(num).width;
-        c.font = F(900,56); const detW = c.measureText("DETIK").width;
-        const gap = 22, totalW = numW + gap + detW;
+        c.font = F(900,150); const numW = c.measureText(num).width;
+        c.font = F(900,54); const detW = c.measureText("DETIK").width;
+        const gap = 20, totalW = numW + gap + detW;
         let vx = 540 - totalW/2;
         c.textAlign = "left";
-        c.fillStyle = "#ff780a"; c.font = F(900,130); c.fillText(num, vx, 1525);
+        c.fillStyle = "#FF780A"; c.font = F(900,150); c.fillText(num, vx, 1460);
         vx += numW + gap;
-        c.fillStyle = "#0b1530"; c.font = F(900,56); c.fillText("DETIK", vx, 1525);
+        c.fillStyle = "#14213D"; c.font = F(900,54); c.fillText("DETIK", vx, 1460);
         c.textAlign = "center";
-        c.fillStyle = "#e8823a"; c.font = F(900,72);
-        let st = ""; for (let i=1;i<=3;i++) st += (i<=stars ? "★" : "☆") + (i<3 ? "  " : "");
-        c.fillText(st, 540, 1605);
-        // footer text (no big pill)
-        c.fillStyle = "#e2e8f0"; c.font = F(800,40);
-        c.fillText("Cobain sekarang di", 540, 1730);
-        c.fillStyle = "#fff"; c.font = F(900,46);
-        c.fillText("puzzle-frenzi.vercel.app", 540, 1792);
+        // stars (per-star colour: gold filled, light grey empty)
+        c.font = F(900,76);
+        const starW = c.measureText("★").width, spW = c.measureText("  ").width;
+        let sx = 540 - (starW*3 + spW*2)/2;
+        c.textAlign = "left";
+        for (let i=1;i<=3;i++){
+          c.fillStyle = i<=stars ? "#F5B921" : "#E2E8F0";
+          c.fillText(i<=stars ? "★" : "☆", sx, 1580);
+          sx += starW + spW;
+        }
+        c.textAlign = "center";
+        // footer
+        c.fillStyle = "#6B7280"; c.font = F(600,40);
+        c.fillText("Cobain sekarang di", 540, 1745);
+        c.fillStyle = "#14213D"; c.font = F(800,46);
+        c.fillText("puzzle-frenzi.vercel.app", 540, 1805);
         cv.toBlob(b => b ? resolve(b) : reject(new Error("canvas")), "image/png");
       });
     }
@@ -1662,21 +1678,31 @@
 
     /* ==================== CERTIFICATE & VOTE ==================== */
     function renderVote(){
-      const grid = $("#voteGrid"); grid.innerHTML = "";
-      $("#voteFeedback").textContent = progress.vote ? "Vote kamu sekarang: " + progress.vote + " (ketuk lain untuk ganti)" : "";
-      VOTE_OPTIONS.forEach(name => {
-        const b = document.createElement("button");
-        b.className = "vote-btn" + (progress.vote === name ? " chosen" : "");
-        b.textContent = name;
-        b.addEventListener("click", ()=>{
-          progress.vote = name; saveProgress();
-          Snd.bonus();
-          $("#voteFeedback").textContent = "Siap! Kamu vote: " + name + " 🎉";
-          renderVote();
-        });
-        grid.appendChild(b);
-      });
+      const inp = $("#voteInput"), fb = $("#voteFeedback");
+      inp.value = progress.vote || "";
+      fb.textContent = progress.vote ? "Usulan kamu sekarang: " + progress.vote + " — kirim lagi untuk ganti." : "";
+      fb.className = "feedback good";
     }
+    async function submitVote(){
+      const inp = $("#voteInput"), fb = $("#voteFeedback");
+      const text = (inp.value || "").trim().replace(/\s+/g, " ");
+      if (!text){ fb.textContent = "Tulis dulu alatnya 🙂"; fb.className = "feedback bad"; inp.focus(); return; }
+      progress.vote = text; saveProgress();
+      Snd.bonus();
+      fb.textContent = "Siap! Usulan kamu tercatat: " + text + " 🎉";
+      fb.className = "feedback good";
+      // kirim ke Supabase level_votes (best-effort; vote lokal sudah tersimpan)
+      try {
+        const sb = window.pfSb;
+        if (sb){
+          let did = localStorage.getItem("pf-device-id");
+          if (!did){ did = "pf-" + Math.random().toString(36).slice(2) + Date.now().toString(36); localStorage.setItem("pf-device-id", did); }
+          await sb.from("level_votes").insert({ device_id: did, choice: text });
+        }
+      } catch(e){ /* offline: abaikan, vote lokal tetap ada */ }
+    }
+    $("#voteSend").addEventListener("click", submitVote);
+    $("#voteInput").addEventListener("keydown", (e)=>{ if (e.key === "Enter") submitVote(); });
     $("#certClose").addEventListener("click", ()=>{
       progress.certSeen = true; saveProgress();
       showOverlay(null); renderHome(); showScreen("screen-home");
@@ -1784,6 +1810,7 @@
           var cfg = window.PUZZLE_FRENZI_CONFIG || {};
           if(!cfg.SUPABASE_URL || !cfg.SUPABASE_ANON_KEY || !window.supabase) return;
           var client = window.supabase.createClient(cfg.SUPABASE_URL, cfg.SUPABASE_ANON_KEY);
+          window.pfSb = client; // dipakai submitVote() untuk level_votes
           var deviceId = localStorage.getItem('pf-device-id');
           if(!deviceId){ deviceId = 'pf-' + Math.random().toString(36).slice(2) + Date.now().toString(36); localStorage.setItem('pf-device-id', deviceId); }
           var lastSent = '';
