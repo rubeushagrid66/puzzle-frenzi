@@ -1,0 +1,408 @@
+{
+  "version": 1,
+  "updated": "2026-11-19",
+  "targetPerSlot": 3,
+  "note": "Quiz bank for Puzzle Frenzi. Only levels whose video is POSTED on @enzilektual may gain new questions; new questions must cite the final approved video script. The game falls back to the inline question when a slot is empty.",
+  "levels": {
+    "1": {
+      "alat": "Kompor Induksi",
+      "video": "https://www.instagram.com/enzilektual/",
+      "posted": false,
+      "reel": null,
+      "sourceScript": null,
+      "end": [
+        {
+          "q": "Apa yang dipanaskan langsung oleh kompor induksi?",
+          "options": [
+            "Dasar panci berbahan besi",
+            "Kaca kompor",
+            "Udara di dapur",
+            "Gagang panci"
+          ],
+          "answer": "Dasar panci berbahan besi",
+          "source": "inline-original"
+        }
+      ],
+      "mc": [
+        {
+          "q": "Kenapa kompor induksi hanya memanaskan panci berbahan besi?",
+          "options": [
+            "Karena medan magnet hanya bekerja pada logam besi",
+            "Karena kacanya panas",
+            "Karena pancinya berat",
+            "Karena listriknya besar"
+          ],
+          "answer": "Karena medan magnet hanya bekerja pada logam besi",
+          "source": "inline-original"
+        }
+      ],
+      "free": [
+        {
+          "q": "Apa yang ada di bawah kaca kompor induksi yang menghasilkan medan magnet?",
+          "keyword": "kumparan",
+          "source": "inline-original"
+        }
+      ]
+    },
+    "2": {
+      "alat": "Kipas Angin",
+      "video": "https://www.instagram.com/enzilektual/reel/Dfy4vdmSEzt/",
+      "posted": true,
+      "reel": "https://www.instagram.com/enzilektual/reel/Dfy4vdmSEzt/",
+      "sourceScript": null,
+      "end": [
+        {
+          "q": "Kenapa kipas membuat kita merasa dingin?",
+          "options": [
+            "Karena menggerakkan udara dan membantu keringat menguap",
+            "Karena mendinginkan udara",
+            "Karena mengeluarkan udara dingin",
+            "Karena menurunkan suhu ruangan"
+          ],
+          "answer": "Karena menggerakkan udara dan membantu keringat menguap",
+          "source": "inline-original"
+        }
+      ],
+      "mc": [
+        {
+          "q": "Kipas membuat kita merasa dingin karena...",
+          "options": [
+            "Membantu keringat menguap",
+            "Mendinginkan udara",
+            "Mengeluarkan udara dingin",
+            "Menurunkan suhu ruangan"
+          ],
+          "answer": "Membantu keringat menguap",
+          "source": "inline-original"
+        }
+      ],
+      "free": [
+        {
+          "q": "Kipas tidak mendinginkan udara, tapi menggerakkan udara dan membantu apa menguap?",
+          "keyword": "keringat",
+          "source": "inline-original"
+        }
+      ]
+    },
+    "3": {
+      "alat": "Kulkas",
+      "video": "https://www.instagram.com/enzilektual/reel/Df53GYWyXEn/",
+      "posted": true,
+      "reel": "https://www.instagram.com/enzilektual/reel/Df53GYWyXEn/",
+      "sourceScript": null,
+      "end": [
+        {
+          "q": "Bagian mana yang memompa freon?",
+          "options": [
+            "Kompresor",
+            "Kondensor",
+            "Evaporator",
+            "Katup ekspansi"
+          ],
+          "answer": "Kompresor",
+          "source": "inline-original"
+        }
+      ],
+      "mc": [
+        {
+          "q": "Apa yang dilakukan evaporator di dalam kulkas?",
+          "options": [
+            "Menyerap panas dari dalam kulkas",
+            "Memompa freon",
+            "Membuang panas ke luar",
+            "Mendinginkan freon"
+          ],
+          "answer": "Menyerap panas dari dalam kulkas",
+          "source": "inline-original"
+        }
+      ],
+      "free": [
+        {
+          "q": "Sebutkan bagian kulkas yang menyerap panas dari dalam kulkas!",
+          "keyword": "evaporator",
+          "source": "inline-original"
+        }
+      ]
+    },
+    "4": {
+      "alat": "Pompa Filter Kolam",
+      "video": "https://www.instagram.com/enzilektual/reel/Df4RTwVyZAV/",
+      "posted": true,
+      "reel": "https://www.instagram.com/enzilektual/reel/Df4RTwVyZAV/",
+      "sourceScript": null,
+      "end": [
+        {
+          "q": "Air kolam jadi bersih setelah melewati apa?",
+          "options": [
+            "Filter",
+            "Got",
+            "Tangki",
+            "Dibuang"
+          ],
+          "answer": "Filter",
+          "source": "inline-original"
+        }
+      ],
+      "mc": [
+        {
+          "q": "Ke mana air bersih kembali setelah disaring?",
+          "options": [
+            "Ke kolam",
+            "Ke got",
+            "Ke tangki",
+            "Dibuang"
+          ],
+          "answer": "Ke kolam",
+          "source": "inline-original"
+        }
+      ],
+      "free": [
+        {
+          "q": "Apa yang tertahan di filter kolam?",
+          "keyword": "kotoran",
+          "source": "inline-original"
+        }
+      ]
+    },
+    "5": {
+      "alat": "Proyektor Bioskop",
+      "video": "https://www.instagram.com/enzilektual/reel/Df0hw3VP_eJ/",
+      "posted": true,
+      "reel": "https://www.instagram.com/enzilektual/reel/Df0hw3VP_eJ/",
+      "sourceScript": null,
+      "end": [
+        {
+          "q": "Apa yang menentukan ukuran gambar proyektor?",
+          "options": [
+            "Jarak proyektor ke layar",
+            "Besar layarnya",
+            "Warna dinding",
+            "Jumlah lampu"
+          ],
+          "answer": "Jarak proyektor ke layar",
+          "source": "inline-original"
+        }
+      ],
+      "mc": [
+        {
+          "q": "Kalau proyektor terlalu jauh dari layar, gambarnya jadi...",
+          "options": [
+            "Terlalu besar dan blur",
+            "Terlalu kecil",
+            "Terbalik",
+            "Hitam putih"
+          ],
+          "answer": "Terlalu besar dan blur",
+          "source": "inline-original"
+        }
+      ],
+      "free": [
+        {
+          "q": "Apa yang menentukan besar kecilnya gambar proyektor?",
+          "keyword": "jarak",
+          "source": "inline-original"
+        }
+      ]
+    },
+    "6": {
+      "alat": "Pistol Air",
+      "video": "https://www.instagram.com/enzilektual/reel/Df1ukiDRZgi/",
+      "posted": true,
+      "reel": "https://www.instagram.com/enzilektual/reel/Df1ukiDRZgi/",
+      "sourceScript": null,
+      "end": [
+        {
+          "q": "Apa yang mendorong air keluar dari pistol air?",
+          "options": [
+            "Udara yang ditekan di dalam tabung",
+            "Baterai",
+            "Pegas",
+            "Air panas"
+          ],
+          "answer": "Udara yang ditekan di dalam tabung",
+          "source": "inline-original"
+        }
+      ],
+      "mc": [
+        {
+          "q": "Apa yang terjadi kalau pistol air dipompa terlalu banyak?",
+          "options": [
+            "Tekanan berlebihan",
+            "Air habis",
+            "Pistol jadi berat",
+            "Tidak terjadi apa-apa"
+          ],
+          "answer": "Tekanan berlebihan",
+          "source": "inline-original"
+        }
+      ],
+      "free": [
+        {
+          "q": "Apa yang ditekan pompa di dalam pistol air?",
+          "keyword": "udara",
+          "source": "inline-original"
+        }
+      ]
+    },
+    "7": {
+      "alat": "Microwave",
+      "video": "https://www.instagram.com/enzilektual/reel/Df6jZamyXmb/",
+      "posted": true,
+      "reel": "https://www.instagram.com/enzilektual/reel/Df6jZamyXmb/",
+      "sourceScript": null,
+      "end": [
+        {
+          "q": "Apa yang dipanaskan microwave dalam makanan?",
+          "options": [
+            "Molekul air",
+            "Molekul gula",
+            "Piringnya",
+            "Udara di dalam"
+          ],
+          "answer": "Molekul air",
+          "source": "inline-original"
+        }
+      ],
+      "mc": [
+        {
+          "q": "Kenapa mangkok keramik kosong tidak panas di microwave?",
+          "options": [
+            "Karena tidak ada molekul air untuk dipanaskan",
+            "Karena keramik menolak panas",
+            "Karena microwave rusak",
+            "Karena mangkoknya tebal"
+          ],
+          "answer": "Karena tidak ada molekul air untuk dipanaskan",
+          "source": "inline-original"
+        }
+      ],
+      "free": [
+        {
+          "q": "Microwave memanaskan molekul apa dalam makanan?",
+          "keyword": "air",
+          "source": "inline-original"
+        }
+      ]
+    },
+    "8": {
+      "alat": "Mesin Cuci",
+      "video": "https://www.instagram.com/enzilektual/",
+      "posted": false,
+      "reel": null,
+      "sourceScript": null,
+      "end": [
+        {
+          "q": "Apa yang dilakukan mesin cuci setelah menggosok pakaian?",
+          "options": [
+            "Membuang air kotor",
+            "Mengeringkan pakaian",
+            "Menambah sabun",
+            "Membuka pintu"
+          ],
+          "answer": "Membuang air kotor",
+          "source": "inline-original"
+        }
+      ],
+      "mc": [
+        {
+          "q": "Apa langkah pertama siklus mesin cuci?",
+          "options": [
+            "Isi air dan sabun",
+            "Peras pakaian",
+            "Bilas",
+            "Buang air kotor"
+          ],
+          "answer": "Isi air dan sabun",
+          "source": "inline-original"
+        }
+      ],
+      "free": [
+        {
+          "q": "Setelah menggosok pakaian, apa yang dibuang mesin cuci?",
+          "keyword": "air kotor",
+          "source": "inline-original"
+        }
+      ]
+    },
+    "9": {
+      "alat": "Rice Cooker",
+      "video": "https://www.instagram.com/enzilektual/",
+      "posted": false,
+      "reel": null,
+      "sourceScript": null,
+      "end": [
+        {
+          "q": "Rice cooker pindah ke WARM saat suhu melewati berapa?",
+          "options": [
+            "100°C",
+            "50°C",
+            "80°C",
+            "150°C"
+          ],
+          "answer": "100°C",
+          "source": "inline-original"
+        }
+      ],
+      "mc": [
+        {
+          "q": "Kenapa suhu rice cooker tertahan di 100°C saat memasak?",
+          "options": [
+            "Karena masih ada air",
+            "Karena nasinya banyak",
+            "Karena tombolnya rusak",
+            "Karena listriknya kecil"
+          ],
+          "answer": "Karena masih ada air",
+          "source": "inline-original"
+        }
+      ],
+      "free": [
+        {
+          "q": "Saklar rice cooker pindah ke WARM saat suhu melewati berapa derajat?",
+          "keyword": "100",
+          "source": "inline-original"
+        }
+      ]
+    },
+    "10": {
+      "alat": "Setrika",
+      "video": "https://www.instagram.com/enzilektual/",
+      "posted": false,
+      "reel": null,
+      "sourceScript": null,
+      "end": [
+        {
+          "q": "Kain apa yang butuh suhu paling tinggi?",
+          "options": [
+            "Katun",
+            "Sutra",
+            "Wol",
+            "Nilon"
+          ],
+          "answer": "Katun",
+          "source": "inline-original"
+        }
+      ],
+      "mc": [
+        {
+          "q": "Kain apa yang butuh suhu setrika paling rendah?",
+          "options": [
+            "Sutra",
+            "Katun",
+            "Wol",
+            "Jeans"
+          ],
+          "answer": "Sutra",
+          "source": "inline-original"
+        }
+      ],
+      "free": [
+        {
+          "q": "Kain apa yang butuh suhu setrika paling tinggi?",
+          "keyword": "katun",
+          "source": "inline-original"
+        }
+      ]
+    }
+  }
+}

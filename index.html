@@ -772,6 +772,27 @@
                 free:{ q:"Kain apa yang butuh suhu setrika paling tinggi?", keyword:"katun" } } }
     ];
 
+    /* ==================== QUIZ BANK ==================== */
+    // Daily-built question bank (quiz-bank.json). The game picks a random
+    // bank question per slot and falls back to the inline question.
+    let QUIZ_BANK = null;
+    const _lastBankQ = {};
+    function bankQ(lv, slot){
+      const fb = slot === "end" ? lv.quiz : slot === "mc" ? lv.minta.mc : lv.minta.free;
+      const bank = QUIZ_BANK && QUIZ_BANK.levels && QUIZ_BANK.levels[String(lv.id)];
+      const list = bank && bank[slot];
+      if (!list || !list.length) return fb;
+      let idx = Math.floor(Math.random() * list.length);
+      const key = lv.id + ":" + slot;
+      if (list.length > 1 && _lastBankQ[key] === idx) idx = (idx + 1) % list.length;
+      _lastBankQ[key] = idx;
+      return list[idx];
+    }
+    fetch("./quiz-bank.json", { cache: "no-store" })
+      .then(r => r.ok ? r.json() : null)
+      .then(j => { if (j && j.levels) QUIZ_BANK = j; })
+      .catch(()=>{});
+
     const VOTE_OPTIONS = ["Blender","Remote","Lampu"];
     const XP_BY_STARS = { 1:25, 2:40, 3:60 };
 
@@ -1364,16 +1385,17 @@
         showReward(true);
         return;
       }
-      $("#claimQ").textContent = lv.quiz.q;
+      const cq = bankQ(lv, "end");
+      $("#claimQ").textContent = cq.q;
       $("#claimFeedback").textContent = "";
       $("#claimFeedback").className = "feedback";
       const opts = $("#claimOpts"); opts.innerHTML = "";
-      shuffle(lv.quiz.options).forEach(opt => {
+      shuffle(cq.options).forEach(opt => {
         const b = document.createElement("button");
         b.className = "quiz-opt";
         b.textContent = opt;
         b.addEventListener("click", ()=>{
-          if (opt === lv.quiz.answer){
+          if (opt === cq.answer){
             b.classList.add("correct");
             Snd.bonus();
             $("#claimFeedback").textContent = "Betul! Hadiahnya buat kamu 🎉";
@@ -1585,7 +1607,7 @@
     }
     $("#modeMc").addEventListener("click", ()=>{
       mintaMode = "mc";
-      const q = G.level.minta.mc;
+      const q = bankQ(G.level, "mc");
       $("#mintaStepMode").style.display = "none";
       $("#mintaStepQuiz").style.display = "";
       $("#mintaFree").style.display = "none";
@@ -1607,7 +1629,8 @@
     });
     $("#modeFree").addEventListener("click", ()=>{
       mintaMode = "free";
-      const q = G.level.minta.free;
+      const q = bankQ(G.level, "free");
+      G._freeQ = q;
       $("#mintaStepMode").style.display = "none";
       $("#mintaStepQuiz").style.display = "";
       $("#mintaOpts").style.display = "none";
@@ -1620,7 +1643,7 @@
     function submitFree(){
       if (mintaAnswered || mintaMode !== "free") return;
       const raw = $("#mintaInput").value.toLowerCase().trim().replace(/\s+/g, " ");
-      const key = G.level.minta.free.keyword.toLowerCase();
+      const key = (G._freeQ || G.level.minta.free).keyword.toLowerCase();
       mintaFinish(raw.includes(key), 12);
     }
     $("#mintaSubmit").addEventListener("click", submitFree);
