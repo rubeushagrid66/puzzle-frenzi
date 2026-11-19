@@ -1554,88 +1554,84 @@
         const cv = document.createElement("canvas"); cv.width = 1080; cv.height = 1920;
         const c = cv.getContext("2d");
         const F = (w,s)=> w + " " + s + "px 'Baloo 2','Nunito',sans-serif";
-        // ---- background: warm cream + subtle dot grid ----
-        const g = c.createLinearGradient(0,0,0,1920);
-        g.addColorStop(0,"#FFF6E5"); g.addColorStop(1,"#FFE9C9");
-        c.fillStyle = g; c.fillRect(0,0,1080,1920);
-        c.fillStyle = "rgba(232,130,58,0.045)";
-        for (let y=48; y<1920; y+=96) for (let x=48; x<1080; x+=96){ c.beginPath(); c.arc(x,y,3,0,7); c.fill(); }
-        function starPath(cx, cy, ro, ri){
+        function starPath(cx, cy, ro, ri, n){
+          n = n || 5;
           c.beginPath();
-          for (let i=0;i<10;i++){
-            const r = i%2 ? ri : ro, a = -Math.PI/2 + i*Math.PI/5;
+          for (let i=0;i<n*2;i++){
+            const r = i%2 ? ri : ro, a = -Math.PI/2 + i*Math.PI/n;
             const x = cx + r*Math.cos(a), y = cy + r*Math.sin(a);
             i ? c.lineTo(x,y) : c.moveTo(x,y);
           }
-          c.closePath(); c.fill();
+          c.closePath();
         }
-        c.fillStyle = "#FFD166";
-        starPath(200,300,26,11); starPath(880,330,22,9); starPath(905,760,18,8); starPath(175,780,20,9);
+        // ---- background: solid bold teal + subtle diagonal stripes ----
+        c.fillStyle = "#14B8A6"; c.fillRect(0,0,1080,1920);
+        c.fillStyle = "rgba(13,148,136,0.20)";
+        for (let x=-1920; x<2160; x+=280){
+          c.beginPath(); c.moveTo(x,0); c.lineTo(x+60,0); c.lineTo(x+1980,1920); c.lineTo(x+1920,1920); c.closePath(); c.fill();
+        }
+        // white + gold sparkles on the teal
+        c.fillStyle = "rgba(255,255,255,0.9)";
+        starPath(960,180,18,5,4); c.fill();
+        starPath(90,1500,20,6,4); c.fill();
+        starPath(990,1420,24,7,4); c.fill();
+        starPath(540,60,16,5,4); c.fill();
+        c.fillStyle = "#F5B921";
+        starPath(1000,760,20,6,4); c.fill();
+        starPath(80,900,16,5,4); c.fill();
         c.textAlign = "center"; c.textBaseline = "alphabetic";
-        // ---- top pill ----
-        c.font = F(900,40);
-        const pillW = c.measureText("PUZZLE FRENZI").width + 64;
+        // ---- trading card ----
         c.save();
-        c.shadowColor = "rgba(20,33,61,0.12)"; c.shadowBlur = 16; c.shadowOffsetY = 6;
-        c.fillStyle = "#fff"; rr(c,(1080-pillW)/2,88,pillW,68,34); c.fill();
+        c.shadowColor = "rgba(0,0,0,0.28)"; c.shadowBlur = 40; c.shadowOffsetY = 16;
+        c.fillStyle = "#FFFDF5"; rr(c,70,140,940,1480,48); c.fill();
         c.restore();
-        c.fillStyle = "#E8823A"; c.fillText("PUZZLE FRENZI", 540, 135);
-        // ---- Enzi badge (bigger) ----
+        c.lineWidth = 10; c.strokeStyle = "#F5B921"; rr(c,70,140,940,1480,48); c.stroke();
+        c.lineWidth = 2; c.strokeStyle = "rgba(245,185,33,0.55)"; rr(c,88,158,904,1444,40); c.stroke();
+        // ---- portrait (rounded rect, Enzi face) ----
         const heroImg = document.getElementById("heroEnzi");
         c.save();
-        c.shadowColor = "rgba(20,33,61,0.25)"; c.shadowBlur = 36; c.shadowOffsetY = 14;
-        c.fillStyle = "#FF8C1A"; c.beginPath(); c.arc(540,520,290,0,7); c.fill();
-        c.restore();
-        c.fillStyle = "#fff"; c.beginPath(); c.arc(540,520,276,0,7); c.fill();
-        c.save(); c.beginPath(); c.arc(540,520,272,0,7); c.clip();
+        rr(c,120,300,840,640,32); c.clip();
         if (heroImg && heroImg.complete && heroImg.naturalWidth){
-          const w = heroImg.naturalWidth, h = heroImg.naturalHeight, ss = w*0.64;
-          c.drawImage(heroImg, w*0.18, h*0.04, ss, ss, 268, 248, 544, 544);
-        } else { c.fillStyle = "#e8e8e8"; c.fillRect(268,248,544,544); }
+          const w = heroImg.naturalWidth, h = heroImg.naturalHeight;
+          c.drawImage(heroImg, w*0.18, h*0.11625, w*0.64, h*0.4875, 120, 300, 840, 640);
+        } else { c.fillStyle = "#e8e8e8"; c.fillRect(120,300,840,640); }
         c.restore();
-        // ---- headline + subline ----
-        c.fillStyle = "#14213D"; c.font = F(900,104);
-        c.fillText("YAY, BERHASIL!", 540, 950);
-        c.font = F(700,48);
-        c.fillText("Aku berhasil jawab", 540, 1035);
-        c.fillStyle = "#E8823A";
-        c.fillText("soal " + lv.id + " di Puzzle Frenzi!", 540, 1100);
-        // ---- white result card ----
-        c.save();
-        c.shadowColor = "rgba(20,33,61,0.14)"; c.shadowBlur = 28; c.shadowOffsetY = 10;
-        c.fillStyle = "#fff"; rr(c,90,1180,900,460,40); c.fill();
-        c.restore();
-        const chip = "LEVEL " + lv.id + "  ·  " + lv.alat.toUpperCase();
-        c.font = F(900,40); const cw = c.measureText(chip).width + 72;
-        c.fillStyle = "#2DD4BF"; rr(c,(1080-cw)/2,1222,cw,68,34); c.fill();
-        c.fillStyle = "#08202C"; c.fillText(chip, 540, 1268);
-        // duration
-        const num = String(secs);
-        c.font = F(900,150); const numW = c.measureText(num).width;
-        c.font = F(900,54); const detW = c.measureText("DETIK").width;
-        const gap = 20, totalW = numW + gap + detW;
-        let vx = 540 - totalW/2;
-        c.textAlign = "left";
-        c.fillStyle = "#FF780A"; c.font = F(900,150); c.fillText(num, vx, 1460);
-        vx += numW + gap;
-        c.fillStyle = "#14213D"; c.font = F(900,54); c.fillText("DETIK", vx, 1460);
-        c.textAlign = "center";
-        // stars (per-star colour: gold filled, light grey empty)
-        c.font = F(900,76);
-        const starW = c.measureText("★").width, spW = c.measureText("  ").width;
-        let sx = 540 - (starW*3 + spW*2)/2;
-        c.textAlign = "left";
-        for (let i=1;i<=3;i++){
-          c.fillStyle = i<=stars ? "#F5B921" : "#E2E8F0";
-          c.fillText(i<=stars ? "★" : "☆", sx, 1580);
-          sx += starW + spW;
+        c.lineWidth = 2; c.strokeStyle = "rgba(20,33,61,0.08)"; rr(c,120,300,840,640,32); c.stroke();
+        // ---- rating badge: gold star + star count ----
+        starPath(170,220,100,42,5); c.fillStyle = "#F5B921"; c.fill();
+        c.lineWidth = 6; c.strokeStyle = "#fff"; starPath(170,220,100,42,5); c.stroke();
+        c.fillStyle = "#14213D"; c.font = F(900,110); c.fillText(String(stars), 170, 248);
+        // ---- name + appliance ----
+        c.fillStyle = "#14213D"; c.font = F(900,120);
+        c.fillText("ENZI", 540, 1080);
+        c.fillStyle = "#E8823A"; c.font = F(800,38);
+        c.fillText(lv.alat.toUpperCase(), 540, 1150);
+        // ---- gold divider with star ----
+        c.strokeStyle = "#F5B921"; c.lineWidth = 3;
+        c.beginPath(); c.moveTo(240,1215); c.lineTo(500,1215); c.stroke();
+        c.beginPath(); c.moveTo(580,1215); c.lineTo(840,1215); c.stroke();
+        c.fillStyle = "#F5B921"; starPath(540,1215,16,7,5); c.fill();
+        // ---- stats strip: LEVEL / WAKTU / BINTANG ----
+        c.fillStyle = "#6B7280"; c.font = F(800,30);
+        c.fillText("LEVEL", 253, 1310); c.fillText("WAKTU", 540, 1310); c.fillText("BINTANG", 827, 1310);
+        c.strokeStyle = "rgba(20,33,61,0.12)"; c.lineWidth = 2;
+        c.beginPath(); c.moveTo(396,1290); c.lineTo(396,1420); c.stroke();
+        c.beginPath(); c.moveTo(684,1290); c.lineTo(684,1420); c.stroke();
+        c.fillStyle = "#14213D";
+        c.font = F(900,72); c.fillText(String(lv.id), 253, 1410);
+        c.font = F(900,52); c.fillText(secs + " DETIK", 540, 1410);
+        for (let i=0;i<3;i++){
+          c.fillStyle = i<stars ? "#F5B921" : "#E2E8F0";
+          starPath(827 + (i-1)*64, 1388, 26, 11, 5); c.fill();
         }
-        c.textAlign = "center";
-        // footer
-        c.fillStyle = "#6B7280"; c.font = F(600,40);
-        c.fillText("Cobain sekarang di", 540, 1745);
-        c.fillStyle = "#14213D"; c.font = F(800,46);
-        c.fillText("puzzle-frenzi.vercel.app", 540, 1805);
+        // ---- tagline inside the card ----
+        c.fillStyle = "#6B7280"; c.font = F(700,30);
+        c.fillText("Teman Intelektual — penasaran cara kerja benda!", 540, 1540);
+        // ---- footer on the teal ----
+        c.fillStyle = "#fff"; c.font = F(900,46);
+        c.fillText("PUZZLE FRENZI", 540, 1750);
+        c.fillStyle = "rgba(255,255,255,0.9)"; c.font = F(700,38);
+        c.fillText("puzzle-frenzi.vercel.app", 540, 1810);
         cv.toBlob(b => b ? resolve(b) : reject(new Error("canvas")), "image/png");
       });
     }
