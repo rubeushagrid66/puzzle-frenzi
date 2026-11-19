@@ -686,6 +686,18 @@
       </div>
     </div>
 
+    <div class="overlay" id="ovLogout">
+      <div class="sheet">
+        <div class="big-emo">👋</div>
+        <h2>Keluar dari akun?</h2>
+        <p id="logoutText">Progressmu sudah tersimpan di akunmu.</p>
+        <div class="btnrow" style="flex-direction:column;">
+          <button class="btn orange" id="logoutConfirmBtn">Ya, keluar</button>
+          <button class="btn ghost" id="logoutCancelBtn">Batal</button>
+        </div>
+      </div>
+    </div>
+
     <div class="toast" id="toast"></div>
 
     <script>
@@ -1810,6 +1822,7 @@
         function showOk(msg){ var e = q("#authOk"); e.textContent = msg; e.style.display = ""; q("#authError").style.display = "none"; }
         function clearMsg(){ q("#authError").style.display = "none"; q("#authOk").style.display = "none"; }
         var authMode = "login";
+        var suppressWelcomeOnce = false;
         function showAuth(mode){
           authMode = mode;
           clearMsg();
@@ -1847,11 +1860,11 @@
           }catch(e){}
         }
         function lastSentReset(){ /* sync() skips unchanged snapshots; a login merge changes localStorage, so it re-sends */ }
-        async function applySession(session){
+        async function applySession(session, fresh){
           if(session && session.user){
             setMode("user", session.user);
             showOverlay(null);
-            toast("Selamat datang, " + usernameOf(session.user) + "! Progressmu kesimpen di akunmu ✅");
+            if(fresh) toast("Selamat datang, " + usernameOf(session.user) + "! Progressmu kesimpen di akunmu ✅");
             migrateProgress();
           } else {
             var saved = null;
@@ -1866,11 +1879,18 @@
             setMode("guest", null); window.pfAuthReady = true; return; // no backend: guest only
           }
           auth.client = window.supabase.createClient(cfg.SUPABASE_URL, cfg.SUPABASE_ANON_KEY);
-          auth.client.auth.getSession().then(function(r){ applySession(r.data && r.data.session); })
-            .catch(function(){ applySession(null); });
+          auth.client.auth.getSession().then(function(r){
+            var sess = r.data && r.data.session;
+            if(!sess){ applySession(null); return; }
+            // Revalidate against the server: a deleted user still has a valid-looking local JWT.
+            auth.client.auth.getUser().then(function(u){
+              if(u.error){ auth.client.auth.signOut(); applySession(null); }
+              else applySession(sess);
+            }).catch(function(){ applySession(sess); });
+          }).catch(function(){ applySession(null); });
           auth.client.auth.onAuthStateChange(function(ev, session){
             if(ev === "SIGNED_IN" && session){ setMode("user", session.user); setBadge(); }
-            if(ev === "SIGNED_OUT"){ setMode(null, null); showOverlay("ovWelcome"); window.pfAuthReady = true; }
+            if(ev === "SIGNED_OUT"){ setMode(null, null); if(suppressWelcomeOnce){ suppressWelcomeOnce = false; } else { showOverlay("ovWelcome"); } window.pfAuthReady = true; }
           });
           q("#welcomeLoginBtn").addEventListener("click", function(){ showAuth("login"); });
           q("#welcomeGuestBtn").addEventListener("click", function(){
@@ -1884,13 +1904,14 @@
           });
           q("#authBadge").addEventListener("click", function(){
             if(auth.mode === "user" && auth.user){
-              if(confirm("Keluar dari akun " + usernameOf(auth.user) + "? Progressmu sudah tersimpan di akunmu.")){
-                auth.client.auth.signOut();
-              }
+              q("#logoutText").textContent = "Keluar dari akun " + usernameOf(auth.user) + "? Progressmu sudah tersimpan di akunmu.";
+              showOverlay("ovLogout");
             } else {
               showOverlay("ovWelcome");
             }
           });
+          q("#logoutConfirmBtn").addEventListener("click", function(){ showOverlay(null); auth.client.auth.signOut(); });
+          q("#logoutCancelBtn").addEventListener("click", function(){ showOverlay(null); });
           q("#authForm").addEventListener("submit", async function(e){
             e.preventDefault();
             clearMsg();
@@ -1906,16 +1927,21 @@
                 if(r.error){
                   var m = (r.error.message || "");
                   showErr(/already registered|already exists/i.test(m) ? "Username sudah dipakai, coba username lain." : "Gagal daftar: " + m);
-                } else if(r.data && r.data.session){
-                  applySession(r.data.session);
                 } else {
+                  // With email confirmation OFF, signUp returns a session.
+                  // Sign it straight back out so the user sees the success
+                  // message and then the login view, as specified.
+                  if(r.data && r.data.session){
+                    suppressWelcomeOnce = true;
+                    try { await auth.client.auth.signOut(); } catch(_){}
+                  }
                   showOk("✅ Akun berhasil dibuat! Silakan login.");
                   setTimeout(function(){ showAuth("login"); }, 1400);
                 }
               } else {
                 var s = await auth.client.auth.signInWithPassword({ email: email, password: password });
                 if(s.error){ showErr("Username atau password salah, coba lagi."); }
-                else { applySession(s.data.session); }
+                else { applySession(s.data.session, true); }
               }
             }catch(err){ showErr("Tidak bisa terhubung, cek internetmu lalu coba lagi."); }
             btn.disabled = false; btn.textContent = authMode === "register" ? "Daftar" : "Login";
