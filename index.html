@@ -400,6 +400,7 @@
       .rank-next{font-size:12.5px;font-weight:800;text-align:right;color:#0f172a;line-height:1.3;flex:none;}
       html,body{touch-action:manipulation;overscroll-behavior:none;}
       .tile{touch-action:none;}
+      #screen-game, #screen-game *{touch-action:none;}
     </style>
   
     <style>
@@ -1789,7 +1790,11 @@
     $("#mintaInput").addEventListener("keydown", e => { if (e.key === "Enter") submitFree(); });
 
     // Mobile: never let a swipe or pinch zoom the page.
+    // (iOS Safari ignores maximum-scale/user-scalable=no, so the block
+    // has to happen at the gesture level, not the viewport.)
     document.addEventListener("gesturestart", e => e.preventDefault());
+    document.addEventListener("dblclick", e => e.preventDefault(), {passive:false});
+    boardEl.addEventListener("touchmove", e => { e.preventDefault(); }, {passive:false});
 
     /* ==================== INIT ==================== */
     renderHome();
