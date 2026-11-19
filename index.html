@@ -1598,19 +1598,18 @@
         c.restore();
         c.lineWidth = 2; c.strokeStyle = "rgba(20,33,61,0.08)"; rr(c,120,300,840,640,32); c.stroke();
         // ---- rating badge: gold star + star count ----
-        starPath(170,220,100,42,5); c.fillStyle = "#F5B921"; c.fill();
-        c.lineWidth = 6; c.strokeStyle = "#fff"; starPath(170,220,100,42,5); c.stroke();
-        c.fillStyle = "#14213D"; c.font = F(900,110); c.fillText(String(stars), 170, 248);
+        starPath(175,228,70,30,5); c.fillStyle = "#F5B921"; c.fill();
+        c.fillStyle = "#14213D"; c.font = F(900,80); c.fillText(String(stars), 175, 256);
         // ---- name + appliance ----
         c.fillStyle = "#14213D"; c.font = F(900,120);
         c.fillText("ENZI", 540, 1080);
         c.fillStyle = "#E8823A"; c.font = F(800,38);
-        c.fillText(lv.alat.toUpperCase(), 540, 1150);
+        c.fillText(lv.alat.toUpperCase(), 540, 1180);
         // ---- gold divider with star ----
         c.strokeStyle = "#F5B921"; c.lineWidth = 3;
-        c.beginPath(); c.moveTo(240,1215); c.lineTo(500,1215); c.stroke();
-        c.beginPath(); c.moveTo(580,1215); c.lineTo(840,1215); c.stroke();
-        c.fillStyle = "#F5B921"; starPath(540,1215,16,7,5); c.fill();
+        c.beginPath(); c.moveTo(240,1235); c.lineTo(500,1235); c.stroke();
+        c.beginPath(); c.moveTo(580,1235); c.lineTo(840,1235); c.stroke();
+        c.fillStyle = "#F5B921"; starPath(540,1235,16,7,5); c.fill();
         // ---- stats strip: LEVEL / WAKTU / BINTANG ----
         c.fillStyle = "#6B7280"; c.font = F(800,30);
         c.fillText("LEVEL", 253, 1310); c.fillText("WAKTU", 540, 1310); c.fillText("BINTANG", 827, 1310);
