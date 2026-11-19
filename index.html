@@ -98,9 +98,9 @@
       .hero-puzzle{position:absolute;right:6px;bottom:6px;z-index:2;width:38px;height:38px;display:flex;align-items:center;justify-content:center;font-size:24px;background:#fff;border-radius:50%;box-shadow:0 4px 10px rgba(0,0,0,.3);transform:rotate(8deg);pointer-events:none;}
       .hero-char{position:relative;}
       .hero-photo{position:relative;width:100%;height:190px;overflow:hidden;border-radius:20px;background:#ffe9c9;box-shadow:0 8px 18px rgba(10,10,40,.18);}
-      .hero-char img{width:100%;height:190px;object-fit:cover;object-position:center 20%;transform:scale(1.5);transform-origin:center 22%;cursor:pointer;display:block;}
+      .hero-char img{width:100%;height:190px;object-fit:cover;object-position:center 20%;cursor:pointer;display:block;}
       .hero-char img.boing{animation:heroBoing .55s ease;}
-      @keyframes heroBoing{0%{transform:scale(1.5)}35%{transform:scale(1.68) rotate(-3deg)}70%{transform:scale(1.41)}100%{transform:scale(1.5)}}
+      @keyframes heroBoing{0%{transform:scale(1)}35%{transform:scale(1.12) rotate(-3deg)}70%{transform:scale(.94)}100%{transform:scale(1)}}
       .hero h1{font-size:clamp(28px,8vw,36px);line-height:1.05;margin-top:14px;white-space:nowrap;text-align:center;color:#12263f;}
       .hero h1 span{background:linear-gradient(90deg,#ffd166,#ff8c1a);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 2px 0 rgba(0,0,0,.2));}
       .hero-cta{display:block;text-align:center;background:linear-gradient(180deg,#ffd166,#F5B921);color:#12263f;font-family:"Baloo 2",sans-serif;font-weight:900;font-size:17px;letter-spacing:.5px;padding:13px 18px;border-radius:999px;text-decoration:none;box-shadow:0 6px 14px rgba(245,185,33,.45);margin-top:16px;cursor:pointer;}
@@ -130,7 +130,7 @@
       .howto{background:#FFFDF5; border:2px solid #F5B921; border-radius:var(--radius); padding:16px; box-shadow:var(--shadow); font-size:14.5px; line-height:1.55; font-weight:600;}
       .howto.collapsed{display:none;}
       .section-title.howto-toggle{cursor:pointer;user-select:none;}
-      .section-title.howto-toggle .chev{margin-left:auto;transition:transform .2s;font-size:16px;}
+      .section-title.howto-toggle .chev{margin-left:auto;transition:transform .2s;font-size:20px;font-weight:900;color:#ffd166;}
       .section-title.howto-toggle.open .chev{transform:rotate(90deg);}
       .howto b{color:var(--teal);}
       .badge-shelf{display:flex; flex-wrap:wrap; gap:8px;}
