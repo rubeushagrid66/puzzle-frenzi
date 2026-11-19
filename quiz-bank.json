@@ -49,7 +49,7 @@
       "video": "https://www.instagram.com/enzilektual/reel/Dfy4vdmSEzt/",
       "posted": true,
       "reel": "https://www.instagram.com/enzilektual/reel/Dfy4vdmSEzt/",
-      "sourceScript": null,
+      "sourceScript": "~/workspace/video/kipas-angin/script-v1.md",
       "end": [
         {
           "q": "Kenapa kipas membuat kita merasa dingin?",
@@ -61,6 +61,17 @@
           ],
           "answer": "Karena menggerakkan udara dan membantu keringat menguap",
           "source": "inline-original"
+        },
+        {
+          "q": "Baling-baling kipas bentuknya miring seperti apa?",
+          "options": [
+            "Kincir",
+            "Piring",
+            "Sendok",
+            "Pisau"
+          ],
+          "answer": "Kincir",
+          "source": "Baling-balingnya itu miring, kayak kincir. Pas muter, dia dorong udara ke depan."
         }
       ],
       "mc": [
@@ -74,6 +85,17 @@
           ],
           "answer": "Membantu keringat menguap",
           "source": "inline-original"
+        },
+        {
+          "q": "Tombol 1, 2, 3 di kipas buat apa?",
+          "options": [
+            "Mengatur cepat-lambatnya baling-baling",
+            "Menyalakan lampu",
+            "Membuat kipas goyang",
+            "Mengisi baterai"
+          ],
+          "answer": "Mengatur cepat-lambatnya baling-baling",
+          "source": "Tombol kecil ini buat nyalain-matiin goyangannya, tombol 1, 2, 3 buat atur cepat-lambatnya."
         }
       ],
       "free": [
@@ -81,6 +103,11 @@
           "q": "Kipas tidak mendinginkan udara, tapi menggerakkan udara dan membantu apa menguap?",
           "keyword": "keringat",
           "source": "inline-original"
+        },
+        {
+          "q": "Apa nama bagian kipas yang bantu motor jalan?",
+          "keyword": "kapasitor",
+          "source": "Ini kapasitornya, yang bantu motor jalan."
         }
       ]
     },
@@ -89,7 +116,7 @@
       "video": "https://www.instagram.com/enzilektual/reel/Df53GYWyXEn/",
       "posted": true,
       "reel": "https://www.instagram.com/enzilektual/reel/Df53GYWyXEn/",
-      "sourceScript": null,
+      "sourceScript": "~/workspace/video/scripts/2026-11-18/script-kulkas.md",
       "end": [
         {
           "q": "Bagian mana yang memompa freon?",
@@ -101,6 +128,17 @@
           ],
           "answer": "Kompresor",
           "source": "inline-original"
+        },
+        {
+          "q": "Kulkas sebenarnya ngapain sama panas dari makanan?",
+          "options": [
+            "Memindahkan panas ke belakang kulkas",
+            "Menghilangkan panasnya begitu saja",
+            "Menyimpan panas di dalam kulkas",
+            "Mengubah panas jadi dingin"
+          ],
+          "answer": "Memindahkan panas ke belakang kulkas",
+          "source": "Kulkas itu memindahkan panas dari makanan ke belakang kulkas. Makanya di dalam dingin, di belakang hangat."
         }
       ],
       "mc": [
@@ -114,6 +152,17 @@
           ],
           "answer": "Menyerap panas dari dalam kulkas",
           "source": "inline-original"
+        },
+        {
+          "q": "Suhu kulkas yang aman itu sekitar berapa derajat?",
+          "options": [
+            "3 sampai 4 derajat",
+            "10 derajat",
+            "20 derajat",
+            "0 derajat"
+          ],
+          "answer": "3 sampai 4 derajat",
+          "source": "Suhu kulkas yang aman itu sekitar 3 sampai 4 derajat, freezernya minus 18 derajat."
         }
       ],
       "free": [
@@ -121,6 +170,11 @@
           "q": "Sebutkan bagian kulkas yang menyerap panas dari dalam kulkas!",
           "keyword": "evaporator",
           "source": "inline-original"
+        },
+        {
+          "q": "Di suhu ruang, bakteri bisa berlipat ganda tiap berapa menit?",
+          "keyword": "20",
+          "source": "Di suhu ruang, bakteri bisa berlipat ganda tiap 20 menit."
         }
       ]
     },
@@ -129,7 +183,7 @@
       "video": "https://www.instagram.com/enzilektual/reel/Df4RTwVyZAV/",
       "posted": true,
       "reel": "https://www.instagram.com/enzilektual/reel/Df4RTwVyZAV/",
-      "sourceScript": null,
+      "sourceScript": "~/workspace/video/pompa-filter-kolam/script-v1.md",
       "end": [
         {
           "q": "Air kolam jadi bersih setelah melewati apa?",
@@ -141,6 +195,17 @@
           ],
           "answer": "Filter",
           "source": "inline-original"
+        },
+        {
+          "q": "Air kotor disedot dari atas kolam lewat apa?",
+          "options": [
+            "Skimmer",
+            "Jet",
+            "Keranjang",
+            "Klorin"
+          ],
+          "answer": "Skimmer",
+          "source": "Air kotor disedot dari atas lewat skimmer, dan dari bawah lewat lubang drain."
         }
       ],
       "mc": [
@@ -154,6 +219,17 @@
           ],
           "answer": "Ke kolam",
           "source": "inline-original"
+        },
+        {
+          "q": "Yang bunuh kuman di kolam itu apa?",
+          "options": [
+            "Klorin",
+            "Filter",
+            "Pompa",
+            "Skimmer"
+          ],
+          "answer": "Klorin",
+          "source": "Filter cuma nangkep kotoran, bukan bunuh kuman. Yang bunuh kuman itu klorin."
         }
       ],
       "free": [
@@ -161,6 +237,11 @@
           "q": "Apa yang tertahan di filter kolam?",
           "keyword": "kotoran",
           "source": "inline-original"
+        },
+        {
+          "q": "Filter DE airnya lewat bubuk apa?",
+          "keyword": "fosil",
+          "source": "Filter DE, airnya lewat bubuk fosil, ini yang paling halus."
         }
       ]
     },
@@ -169,7 +250,7 @@
       "video": "https://www.instagram.com/enzilektual/reel/Df0hw3VP_eJ/",
       "posted": true,
       "reel": "https://www.instagram.com/enzilektual/reel/Df0hw3VP_eJ/",
-      "sourceScript": null,
+      "sourceScript": "~/workspace/video/proyektor-bioskop/script-v1.md",
       "end": [
         {
           "q": "Apa yang menentukan ukuran gambar proyektor?",
@@ -181,6 +262,17 @@
           ],
           "answer": "Jarak proyektor ke layar",
           "source": "inline-original"
+        },
+        {
+          "q": "Gambar film itu sebenarnya berapa foto setiap detik?",
+          "options": [
+            "24 foto",
+            "10 foto",
+            "50 foto",
+            "100 foto"
+          ],
+          "answer": "24 foto",
+          "source": "Gambarnya itu sebenernya cuma foto diam, 24 foto setiap detik."
         }
       ],
       "mc": [
@@ -194,6 +286,17 @@
           ],
           "answer": "Terlalu besar dan blur",
           "source": "inline-original"
+        },
+        {
+          "q": "Lampu super terang di dalam proyektor itu jenisnya apa?",
+          "options": [
+            "Xenon atau laser",
+            "Lampu bohlam biasa",
+            "Lilin",
+            "Lampu neon kamar"
+          ],
+          "answer": "Xenon atau laser",
+          "source": "Di dalam sini ada lampu super terang, xenon atau laser."
         }
       ],
       "free": [
@@ -201,6 +304,11 @@
           "q": "Apa yang menentukan besar kecilnya gambar proyektor?",
           "keyword": "jarak",
           "source": "inline-original"
+        },
+        {
+          "q": "Layar bioskop untuk film 3D warnanya apa?",
+          "keyword": "silver",
+          "source": "Makanya layarnya silver, bukan putih biasa."
         }
       ]
     },
@@ -209,7 +317,7 @@
       "video": "https://www.instagram.com/enzilektual/reel/Df1ukiDRZgi/",
       "posted": true,
       "reel": "https://www.instagram.com/enzilektual/reel/Df1ukiDRZgi/",
-      "sourceScript": null,
+      "sourceScript": "~/workspace/video/pistol-air/script-v1.md",
       "end": [
         {
           "q": "Apa yang mendorong air keluar dari pistol air?",
@@ -221,6 +329,17 @@
           ],
           "answer": "Udara yang ditekan di dalam tabung",
           "source": "inline-original"
+        },
+        {
+          "q": "Langkah pertama cara kerja pistol air itu apa?",
+          "options": [
+            "Simpan air di tangkinya",
+            "Tarik picunya",
+            "Pompa dulu",
+            "Isi dengan air panas"
+          ],
+          "answer": "Simpan air di tangkinya",
+          "source": "Pertama, simpan air di tangkinya. Kedua, pompanya yang bangun tekanan. Ketiga, picunya yang buka pintu."
         }
       ],
       "mc": [
@@ -234,6 +353,17 @@
           ],
           "answer": "Tekanan berlebihan",
           "source": "inline-original"
+        },
+        {
+          "q": "Katup di pistol air kerjanya gimana?",
+          "options": [
+            "Cuma buka satu arah biar air nggak balik lagi",
+            "Buka ke dua arah",
+            "Menutup tangki air",
+            "Mendinginkan air"
+          ],
+          "answer": "Cuma buka satu arah biar air nggak balik lagi",
+          "source": "Ini katupnya, cuma buka satu arah biar air nggak balik lagi."
         }
       ],
       "free": [
@@ -241,6 +371,11 @@
           "q": "Apa yang ditekan pompa di dalam pistol air?",
           "keyword": "udara",
           "source": "inline-original"
+        },
+        {
+          "q": "Makin kecil lubang depan pistol air, semburannya makin apa?",
+          "keyword": "jauh",
+          "source": "Makin kecil lubangnya, makin cepat dan makin jauh semburannya."
         }
       ]
     },
@@ -249,7 +384,7 @@
       "video": "https://www.instagram.com/enzilektual/reel/Df6jZamyXmb/",
       "posted": true,
       "reel": "https://www.instagram.com/enzilektual/reel/Df6jZamyXmb/",
-      "sourceScript": null,
+      "sourceScript": "~/workspace/video/scripts/2026-11-18/script-microwave.md",
       "end": [
         {
           "q": "Apa yang dipanaskan microwave dalam makanan?",
@@ -261,6 +396,17 @@
           ],
           "answer": "Molekul air",
           "source": "inline-original"
+        },
+        {
+          "q": "Alat kecil yang bikin gelombang mikro di dalam microwave namanya apa?",
+          "options": [
+            "Magnetron",
+            "Kompresor",
+            "Kapasitor",
+            "Motor"
+          ],
+          "answer": "Magnetron",
+          "source": "Gelombang ini dibikin sama alat kecil di dalam microwave, namanya magnetron."
         }
       ],
       "mc": [
@@ -274,6 +420,17 @@
           ],
           "answer": "Karena tidak ada molekul air untuk dipanaskan",
           "source": "inline-original"
+        },
+        {
+          "q": "Kenapa piring di microwave muter?",
+          "options": [
+            "Supaya gelombangnya kena semua bagian makanan",
+            "Supaya makanan tidak jatuh",
+            "Supaya microwave tidak panas",
+            "Supaya cepat selesai"
+          ],
+          "answer": "Supaya gelombangnya kena semua bagian makanan",
+          "source": "Supaya gelombangnya kena semua bagian makanan. Kalau nggak muter, ada bagian yang panas, ada bagian yang masih dingin."
         }
       ],
       "free": [
@@ -281,6 +438,11 @@
           "q": "Microwave memanaskan molekul apa dalam makanan?",
           "keyword": "air",
           "source": "inline-original"
+        },
+        {
+          "q": "Dinding microwave dari besi supaya gelombangnya apa di dalam?",
+          "keyword": "mantul",
+          "source": "Supaya gelombangnya mantul mantul di dalam, nggak keluar."
         }
       ]
     },
