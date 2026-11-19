@@ -23,9 +23,9 @@ Live: https://puzzle-frenzi.vercel.app
 
 ## Supabase setup
 
-1. Buat project baru di Supabase dengan akun **naimybinomo2@gmail.com** (akun amy.superant sudah penuh project-nya). Nama project: `puzzle-frenzi`, region: Singapore (ap-southeast-1).
+1. Project Supabase sudah dibuat oleh user dengan akun **dpphapi@gmail.com** (bukan naimybinomo2). Nama project di dashboard: `dpphapi@gmail.com's Project`, ref `pmvnfrmvockakaxgmaoc`, region Tokyo (ap-northeast-1), organisasi "Enzi", Free plan.
 2. Di SQL Editor, jalankan `supabase/schema.sql` (tabel `player_progress`, `leaderboard`, `level_votes` + RLS).
-3. Salin Project URL + anon key dari Settings → API ke `js/supabase-config.js` (dan ke Vercel env kalau nanti dipakai server-side).
+3. Salin Project URL + anon key dari Settings → API ke `js/supabase-config.js` — sudah terisi: URL `https://pmvnfrmvockakaxgmaoc.supabase.co`.
 4. Deploy ulang — sync jalan otomatis tiap 8 detik saat main.
 
 ## Deploy (Vercel)
