@@ -2,7 +2,7 @@
 <html lang="id">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
     <meta name="color-scheme" content="light dark" />
     <link rel="icon" href="data:," />
     <title>Puzzle Frenzi — Enzi Match 3</title>
@@ -405,6 +405,8 @@
       .rank-title{font-family:"Baloo 2",sans-serif;font-size:24px;font-weight:800;line-height:1.1;color:#0f172a;}
       .rank-tag{font-size:13px;font-weight:700;color:var(--muted);}
       .rank-next{font-size:12.5px;font-weight:800;text-align:right;color:#0f172a;line-height:1.3;flex:none;}
+      html,body{touch-action:manipulation;overscroll-behavior:none;}
+      .tile{touch-action:none;}
     </style>
   
     <style>
@@ -1293,6 +1295,7 @@
       if (G.busy || G.over || G.paused) return;
       const tile = tileFromEvent(e);
       if (!tile) return;
+      try { e.target.setPointerCapture(e.pointerId); } catch(_){}
       G.dragStart = { tile:tile, x:e.clientX, y:e.clientY, used:false };
     }
     boardEl.addEventListener("pointermove", e => {
@@ -1713,6 +1716,9 @@
     }
     $("#mintaSubmit").addEventListener("click", submitFree);
     $("#mintaInput").addEventListener("keydown", e => { if (e.key === "Enter") submitFree(); });
+
+    // Mobile: never let a swipe or pinch zoom the page.
+    document.addEventListener("gesturestart", e => e.preventDefault());
 
     /* ==================== INIT ==================== */
     renderHome();
