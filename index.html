@@ -367,6 +367,15 @@
       @media (prefers-reduced-motion: reduce){
         *{animation-duration:.01ms !important; transition-duration:.01ms !important;}
       }
+      .topbar{display:flex;align-items:center;gap:8px;}
+      .auth-badge{margin-left:auto;background:rgba(0,0,0,.28);color:#fff;border:1px solid rgba(255,255,255,.45);border-radius:999px;padding:7px 12px;font-weight:900;font-size:13px;cursor:pointer;font-family:inherit;max-width:170px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+      .auth-badge.logged{background:#ffd166;color:#4a2400;border-color:#ffd166;}
+      .auth-label{display:block;text-align:left;font-weight:800;font-size:14px;margin:12px 0 0;color:#0f172a;}
+      .auth-label input{display:block;width:100%;margin-top:6px;padding:12px 14px;border:2px solid var(--card-line);border-radius:14px;font-size:16px;font-family:inherit;background:#fff;color:#0f172a;}
+      .auth-label input:focus{outline:none;border-color:var(--teal);}
+      .auth-switch{margin-top:14px;font-size:14px;font-weight:700;}
+      .auth-switch a{color:var(--teal);font-weight:900;}
+      #authError,#authOk{margin-top:10px;}
     </style>
   
     <style>
@@ -400,6 +409,7 @@
       <div class="wrap">
         <div class="topbar">
           <div class="rank-chip"><span class="dot">⭐</span><span id="rankName">Pemula</span></div>
+          <button class="auth-badge" id="authBadge">Guest Mode</button>
           <button class="icon-btn" id="muteBtnHome" aria-label="Suara nyala atau mati">🔊</button>
         </div>
 
@@ -587,6 +597,35 @@
         <div class="btnrow">
           <button class="btn orange" id="certClose">Siap, Makasih Enzi!</button>
         </div>
+      </div>
+    </div>
+
+    <div class="overlay" id="ovWelcome">
+      <div class="sheet">
+        <div class="big-emo">🎮</div>
+        <h2>Main Puzzle Frenzi</h2>
+        <p>Login supaya progressmu kesimpen di akunmu dan bisa lanjut di HP mana aja. Atau main dulu sebagai guest — tapi progress guest cuma tersimpan di HP ini.</p>
+        <div class="btnrow" style="flex-direction:column;">
+          <button class="btn orange" id="welcomeLoginBtn">🔐 Login / Daftar</button>
+          <button class="btn ghost" id="welcomeGuestBtn">👤 Main sebagai Guest</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="overlay" id="ovAuth">
+      <div class="sheet">
+        <div class="big-emo">🔐</div>
+        <h2 id="authTitle">Login</h2>
+        <p id="authSub">Masuk dengan username dan passwordmu.</p>
+        <form id="authForm">
+          <label class="auth-label">Username<input id="authUser" type="text" placeholder="contoh: enzi_fan" autocomplete="username" /></label>
+          <label class="auth-label">Password<input id="authPass" type="password" placeholder="minimal 6 karakter" autocomplete="current-password" /></label>
+          <div class="feedback bad" id="authError" style="display:none;"></div>
+          <div class="feedback good" id="authOk" style="display:none;"></div>
+          <div class="btnrow"><button class="btn orange" id="authSubmit" type="submit">Login</button></div>
+        </form>
+        <p class="auth-switch"><span id="authSwitchText">Belum punya akun?</span> <a href="#" id="authSwitch">Daftar</a></p>
+        <p class="auth-switch"><a href="#" id="authBack">← Nanti dulu, main sebagai guest</a></p>
       </div>
     </div>
 
@@ -1606,15 +1645,22 @@
           var lastSent = '';
           async function sync(){
             try{
+              if(!window.pfAuthReady) return; // wait until the login/guest choice is known
+              if(window.pfAuthMode === 'guest') return; // guest progress stays on this device only
               var raw = localStorage.getItem('enzi-match3-progress-v2');
               if(!raw || raw === lastSent) return;
               lastSent = raw;
               var pr = JSON.parse(raw);
               var stars = 0, xp = pr.xp || 0;
               if(pr.stars){ Object.values(pr.stars).forEach(function(n){ stars += (n||0); }); }
-              var row = { device_id: deviceId, total_stars: stars, total_xp: xp, rank: pr.rank || 'Pemula', completed_levels: pr.completed || pr.unlocked || {}, updated_at: new Date().toISOString() };
+              var isUser = window.pfAuthMode === 'user' && window.pfAuth && window.pfAuth.user;
+              var key = isUser ? 'user-' + window.pfAuth.user.id : deviceId;
+              var row = { device_id: key, total_stars: stars, total_xp: xp, rank: pr.rank || 'Pemula', completed_levels: pr.completed || pr.unlocked || {}, updated_at: new Date().toISOString() };
+              if(isUser){ row.user_id = window.pfAuth.user.id; }
               await client.from('player_progress').upsert(row, { onConflict: 'device_id' });
-              await client.from('leaderboard').upsert({ device_id: deviceId, total_stars: stars, total_xp: xp, updated_at: row.updated_at }, { onConflict: 'device_id' });
+              var lb = { device_id: key, total_stars: stars, total_xp: xp, updated_at: row.updated_at };
+              if(isUser){ lb.user_id = window.pfAuth.user.id; lb.display_name = (window.pfAuth.user.user_metadata && window.pfAuth.user.user_metadata.username) || null; }
+              await client.from('leaderboard').upsert(lb, { onConflict: 'device_id' });
             }catch(e){ /* offline / not configured yet: ignore */ }
           }
           window.pfSync = sync;
@@ -1622,6 +1668,147 @@
           document.addEventListener('visibilitychange', function(){ if(!document.hidden) sync(); });
           setTimeout(sync, 3000);
         }catch(e){}
+      })();
+    </script>
+    <script>
+      // Puzzle Frenzi accounts: username + password only (Supabase Auth).
+      // The email behind it is synthetic (username@puzzlefrenzi.app) and never shown.
+      (function(){
+        var cfg = window.PUZZLE_FRENZI_CONFIG || {};
+        var AUTH_DOMAIN = "@puzzlefrenzi.app";
+        var MODE_KEY = "pf-auth-mode"; // 'guest' | 'user'
+        var auth = { mode: null, user: null, client: null };
+        window.pfAuth = auth;
+        function q(sel){ return document.querySelector(sel); }
+        function usernameOf(u){ return (u && u.user_metadata && u.user_metadata.username) || (u && u.email ? u.email.split("@")[0] : ""); }
+        function setBadge(){
+          var b = q("#authBadge"); if(!b) return;
+          if(auth.mode === "user" && auth.user){ b.textContent = usernameOf(auth.user); b.classList.add("logged"); }
+          else { b.textContent = "Guest Mode"; b.classList.remove("logged"); }
+        }
+        function setMode(mode, user){
+          auth.mode = mode; auth.user = user || null;
+          window.pfAuthMode = mode;
+          try { if(mode) localStorage.setItem(MODE_KEY, mode); else localStorage.removeItem(MODE_KEY); } catch(e){}
+          setBadge();
+        }
+        function showErr(msg){ var e = q("#authError"); e.textContent = msg; e.style.display = ""; q("#authOk").style.display = "none"; }
+        function showOk(msg){ var e = q("#authOk"); e.textContent = msg; e.style.display = ""; q("#authError").style.display = "none"; }
+        function clearMsg(){ q("#authError").style.display = "none"; q("#authOk").style.display = "none"; }
+        var authMode = "login";
+        function showAuth(mode){
+          authMode = mode;
+          clearMsg();
+          q("#authTitle").textContent = mode === "register" ? "Daftar Akun" : "Login";
+          q("#authSub").textContent = mode === "register" ? "Bikin akun dengan username dan password — langsung bisa main." : "Masuk dengan username dan passwordmu.";
+          q("#authSubmit").textContent = mode === "register" ? "Daftar" : "Login";
+          q("#authSwitchText").textContent = mode === "register" ? "Sudah punya akun?" : "Belum punya akun?";
+          q("#authSwitch").textContent = mode === "register" ? "Login" : "Daftar";
+          q("#authPass").setAttribute("autocomplete", mode === "register" ? "new-password" : "current-password");
+          showOverlay("ovAuth");
+          setTimeout(function(){ q("#authUser").focus(); }, 300);
+        }
+        function validUsername(u){ return /^[a-zA-Z0-9_]{3,20}$/.test(u); }
+        async function migrateProgress(){
+          try{
+            if(!auth.client || !auth.user) return;
+            var uid = auth.user.id;
+            var res = await auth.client.from("player_progress").select("*").eq("user_id", uid).maybeSingle();
+            var row = res && res.data;
+            var raw = localStorage.getItem("enzi-match3-progress-v2");
+            var pr = raw ? JSON.parse(raw) : { xp:0, stars:{}, claimed:{}, badges:[] };
+            if(row){
+              pr.xp = Math.max(pr.xp || 0, row.total_xp || 0);
+              var cloudStars = {};
+              if(row.completed_levels && typeof row.completed_levels === "object"){
+                Object.keys(row.completed_levels).forEach(function(k){ cloudStars[k] = row.completed_levels[k]; });
+              }
+              pr.stars = pr.stars || {};
+              Object.keys(cloudStars).forEach(function(k){ pr.stars[k] = Math.max(pr.stars[k] || 0, cloudStars[k] || 0); });
+              localStorage.setItem("enzi-match3-progress-v2", JSON.stringify(pr));
+              if(typeof loadProgress === "function"){ try { loadProgress(); } catch(e){} }
+              if(typeof renderHome === "function"){ try { renderHome(); } catch(e){} }
+            }
+            if(window.pfSync){ lastSentReset(); window.pfSync(); }
+          }catch(e){}
+        }
+        function lastSentReset(){ /* sync() skips unchanged snapshots; a login merge changes localStorage, so it re-sends */ }
+        async function applySession(session){
+          if(session && session.user){
+            setMode("user", session.user);
+            showOverlay(null);
+            toast("Selamat datang, " + usernameOf(session.user) + "! Progressmu kesimpen di akunmu ✅");
+            migrateProgress();
+          } else {
+            var saved = null;
+            try { saved = localStorage.getItem(MODE_KEY); } catch(e){}
+            if(saved === "guest"){ setMode("guest", null); }
+            else { setMode(null, null); showOverlay("ovWelcome"); }
+          }
+          window.pfAuthReady = true;
+        }
+        function init(){
+          if(!cfg.SUPABASE_URL || !cfg.SUPABASE_ANON_KEY || !window.supabase){
+            setMode("guest", null); window.pfAuthReady = true; return; // no backend: guest only
+          }
+          auth.client = window.supabase.createClient(cfg.SUPABASE_URL, cfg.SUPABASE_ANON_KEY);
+          auth.client.auth.getSession().then(function(r){ applySession(r.data && r.data.session); })
+            .catch(function(){ applySession(null); });
+          auth.client.auth.onAuthStateChange(function(ev, session){
+            if(ev === "SIGNED_IN" && session){ setMode("user", session.user); setBadge(); }
+            if(ev === "SIGNED_OUT"){ setMode(null, null); showOverlay("ovWelcome"); window.pfAuthReady = true; }
+          });
+          q("#welcomeLoginBtn").addEventListener("click", function(){ showAuth("login"); });
+          q("#welcomeGuestBtn").addEventListener("click", function(){
+            setMode("guest", null); window.pfAuthReady = true; showOverlay(null);
+            toast("Mode guest — progress hanya tersimpan di HP ini 👤");
+          });
+          q("#authSwitch").addEventListener("click", function(e){ e.preventDefault(); showAuth(authMode === "login" ? "register" : "login"); });
+          q("#authBack").addEventListener("click", function(e){
+            e.preventDefault(); setMode("guest", null); window.pfAuthReady = true; showOverlay(null);
+            toast("Mode guest — progress hanya tersimpan di HP ini 👤");
+          });
+          q("#authBadge").addEventListener("click", function(){
+            if(auth.mode === "user" && auth.user){
+              if(confirm("Keluar dari akun " + usernameOf(auth.user) + "? Progressmu sudah tersimpan di akunmu.")){
+                auth.client.auth.signOut();
+              }
+            } else {
+              showOverlay("ovWelcome");
+            }
+          });
+          q("#authForm").addEventListener("submit", async function(e){
+            e.preventDefault();
+            clearMsg();
+            var username = q("#authUser").value.trim();
+            var password = q("#authPass").value;
+            if(!validUsername(username)){ showErr("Username 3–20 karakter, huruf/angka/underscore saja."); return; }
+            if(!password || password.length < 6){ showErr("Password minimal 6 karakter."); return; }
+            var btn = q("#authSubmit"); btn.disabled = true; btn.textContent = "Tunggu...";
+            try{
+              var email = username.toLowerCase() + AUTH_DOMAIN;
+              if(authMode === "register"){
+                var r = await auth.client.auth.signUp({ email: email, password: password, options: { data: { username: username } } });
+                if(r.error){
+                  var m = (r.error.message || "");
+                  showErr(/already registered|already exists/i.test(m) ? "Username sudah dipakai, coba username lain." : "Gagal daftar: " + m);
+                } else if(r.data && r.data.session){
+                  applySession(r.data.session);
+                } else {
+                  showOk("✅ Akun berhasil dibuat! Silakan login.");
+                  setTimeout(function(){ showAuth("login"); }, 1400);
+                }
+              } else {
+                var s = await auth.client.auth.signInWithPassword({ email: email, password: password });
+                if(s.error){ showErr("Username atau password salah, coba lagi."); }
+                else { applySession(s.data.session); }
+              }
+            }catch(err){ showErr("Tidak bisa terhubung, cek internetmu lalu coba lagi."); }
+            btn.disabled = false; btn.textContent = authMode === "register" ? "Daftar" : "Login";
+          });
+        }
+        if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
+        else init();
       })();
     </script>
   </body>

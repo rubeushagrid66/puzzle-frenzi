@@ -68,3 +68,10 @@ CREATE INDEX IF NOT EXISTS leaderboard_stars_idx
   ON leaderboard (total_stars DESC, total_xp DESC);
 CREATE INDEX IF NOT EXISTS level_votes_choice_idx
   ON level_votes (choice);
+
+-- Accounts (added 2026-11-19): username+password login via Supabase Auth.
+-- A logged-in player's rows carry user_id; guests have no user row (local only).
+ALTER TABLE player_progress ADD COLUMN IF NOT EXISTS user_id UUID;
+ALTER TABLE leaderboard ADD COLUMN IF NOT EXISTS user_id UUID;
+CREATE INDEX IF NOT EXISTS player_progress_user_idx ON player_progress (user_id);
+CREATE INDEX IF NOT EXISTS leaderboard_user_idx ON leaderboard (user_id);
