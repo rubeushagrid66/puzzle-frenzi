@@ -330,11 +330,19 @@
       .confetti-bit{position:fixed; top:-14px; z-index:200; width:10px; height:15px; border-radius:2px; pointer-events:none; animation:confFall linear forwards;}
       @keyframes confFall{to{transform:translateY(105vh) rotate(720deg);}}
       .toast{
-        position:fixed; left:50%; bottom:26px; transform:translateX(-50%) translateY(80px); z-index:300;
+        position:fixed; left:50%; bottom:26px; z-index:300;
+        transform:translateX(-50%) translateY(calc(100% + 60px));
+        opacity:0; visibility:hidden; pointer-events:none;
         background:var(--navy); color:#fff; font-weight:800; font-size:14.5px; padding:12px 20px; border-radius:999px;
-        box-shadow:0 10px 24px rgba(0,0,0,.3); transition:transform .3s; max-width:88vw; text-align:center;
+        box-shadow:0 10px 24px rgba(0,0,0,.3);
+        transition:transform .3s, opacity .3s, visibility 0s .3s;
+        max-width:88vw; text-align:center;
       }
-      .toast.show{transform:translateX(-50%) translateY(0);}
+      .toast.show{
+        transform:translateX(-50%) translateY(0);
+        opacity:1; visibility:visible; pointer-events:auto;
+        transition:transform .3s, opacity .3s, visibility 0s 0s;
+      }
       .cheer{display:flex; gap:12px; align-items:center; background:var(--card); border:2px solid var(--card-line); border-radius:18px; padding:10px 14px; margin-top:14px; text-align:left; box-shadow:var(--shadow);}
       .cheer img{width:64px; height:64px; object-fit:cover; object-position:top; border-radius:14px; background:var(--cream); flex:none;}
       .cheer p{margin:0; font-size:14px; font-weight:700; line-height:1.45;}
@@ -917,6 +925,9 @@
       const t = $("#toast"); t.textContent = msg; t.classList.add("show");
       clearTimeout(toastTimer); toastTimer = setTimeout(()=>t.classList.remove("show"), 2400);
     }
+    document.getElementById("toast").addEventListener("click", ()=>{
+      clearTimeout(toastTimer); document.getElementById("toast").classList.remove("show");
+    });
     function confetti(){
       const colors = ["#1B7F86","#E8823A","#f5b921","#ff6b9d","#4cc9f0","#80ed99"];
       for (let i=0;i<46;i++){
