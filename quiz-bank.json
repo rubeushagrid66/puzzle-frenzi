@@ -727,6 +727,86 @@
           "source": "inline-original"
         }
       ]
+    },
+    "11": {
+      "alat": "Blender",
+      "video": "https://www.instagram.com/reel/DfyaHnJS3WN/",
+      "posted": true,
+      "reel": "https://www.instagram.com/reel/DfyaHnJS3WN/",
+      "sourceScript": "~/workspace/video/blender/script-v1.md",
+      "end": [
+        {
+          "q": "Pisau blender muter berapa kali dalam satu detik?",
+          "options": [
+            "Lebih dari 300 kali",
+            "10 kali",
+            "50 kali",
+            "100 kali"
+          ],
+          "answer": "Lebih dari 300 kali",
+          "source": "Pisaunya muter lebih dari 300 kali dalam satu detik!"
+        }
+      ],
+      "mc": [
+        {
+          "q": "Kenapa blender butuh cairan dulu sebelum buah?",
+          "options": [
+            "Supaya makanan tidak diam di atas",
+            "Supaya jusnya manis",
+            "Supaya pisau tidak tumpul",
+            "Supaya gelas tidak pecah"
+          ],
+          "answer": "Supaya makanan tidak diam di atas",
+          "source": "Blender butuh cairan! Cairan dulu baru buah, kalau nggak ada cairan makanannya diam di atas."
+        }
+      ],
+      "free": [
+        {
+          "q": "Apa yang terbentuk di dalam gelas saat pisau blender muter, kayak tornado kecil?",
+          "keyword": "pusaran",
+          "source": "Pisau yang muter ngelempar cairan ke dinding gelas, sampai terbentuk pusaran — kayak tornado kecil di dalam gelas!"
+        }
+      ]
+    },
+    "12": {
+      "alat": "Mainan Remote Control",
+      "video": "https://www.instagram.com/reel/DfxWM4MSWZL/",
+      "posted": true,
+      "reel": "https://www.instagram.com/reel/DfxWM4MSWZL/",
+      "sourceScript": "~/workspace/video/remote-control/script-v2.md",
+      "end": [
+        {
+          "q": "Apa tugas penerima di dalam mobil remote control?",
+          "options": [
+            "Mendengarkan gelombang radio dan membagi tugas ke ESC dan servo",
+            "Menggerakkan roda",
+            "Mengisi baterai",
+            "Membunyikan klakson"
+          ],
+          "answer": "Mendengarkan gelombang radio dan membagi tugas ke ESC dan servo",
+          "source": "Dia dengerin gelombangnya, terus bagi-bagi tugas: kecepatan ke ESC, belok ke servo."
+        }
+      ],
+      "mc": [
+        {
+          "q": "ESC itu seperti apa untuk listrik di mobil remote control?",
+          "options": [
+            "Polisi lalu lintas",
+            "Telinga mobil",
+            "Tangan kecil",
+            "Otak mobil"
+          ],
+          "answer": "Polisi lalu lintas",
+          "source": "ESC itu kayak polisi lalu lintas buat listrik: dikit listriknya, mobil jadi pelan. Banyak listriknya, mobil jadi ngebut!"
+        }
+      ],
+      "free": [
+        {
+          "q": "Bagian mobil apa yang kayak telinga, yang mendengarkan gelombang radio dari remote?",
+          "keyword": "penerima",
+          "source": "Di dalam mobil ada penerima, kayak telinganya mobil."
+        }
+      ]
     }
   }
 }
