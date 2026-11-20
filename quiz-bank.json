@@ -1,14 +1,14 @@
 {
   "version": 1,
-  "updated": "2026-11-19",
+  "updated": "2026-11-20",
   "targetPerSlot": 3,
   "note": "Quiz bank for Puzzle Frenzi. Only levels whose video is POSTED on @enzilektual may gain new questions; new questions must cite the final approved video script. The game falls back to the inline question when a slot is empty.",
   "levels": {
     "1": {
       "alat": "Kompor Induksi",
-      "video": "https://www.instagram.com/enzilektual/",
-      "posted": false,
-      "reel": null,
+      "video": "https://www.instagram.com/reel/DfxDowyyXPA/",
+      "posted": true,
+      "reel": "https://www.instagram.com/reel/DfxDowyyXPA/",
       "sourceScript": null,
       "end": [
         {
@@ -72,6 +72,17 @@
           ],
           "answer": "Kincir",
           "source": "Baling-balingnya itu miring, kayak kincir. Pas muter, dia dorong udara ke depan."
+        },
+        {
+          "q": "Baling-baling kipas muter berapa kali dalam satu detik?",
+          "options": [
+            "Lebih dari 10 kali",
+            "1 kali",
+            "3 kali",
+            "100 kali"
+          ],
+          "answer": "Lebih dari 10 kali",
+          "source": "Baling-balingnya muter lebih dari 10 kali dalam satu detik!"
         }
       ],
       "mc": [
@@ -96,6 +107,17 @@
           ],
           "answer": "Mengatur cepat-lambatnya baling-baling",
           "source": "Tombol kecil ini buat nyalain-matiin goyangannya, tombol 1, 2, 3 buat atur cepat-lambatnya."
+        },
+        {
+          "q": "Apa yang bikin kepala kipas goyang kiri-kanan?",
+          "options": [
+            "Roda gigi",
+            "Kapasitor",
+            "Motor",
+            "Tombol 1, 2, 3"
+          ],
+          "answer": "Roda gigi",
+          "source": "Terus ini roda giginya, yang bikin kepala kipas goyang kiri-kanan."
         }
       ],
       "free": [
@@ -108,6 +130,11 @@
           "q": "Apa nama bagian kipas yang bantu motor jalan?",
           "keyword": "kapasitor",
           "source": "Ini kapasitornya, yang bantu motor jalan."
+        },
+        {
+          "q": "Apa yang tidak boleh dimasukkan ke kipas angin?",
+          "keyword": "jari",
+          "source": "Jangan pernah masukin jari ke kipas angin ya."
         }
       ]
     },
@@ -139,6 +166,17 @@
           ],
           "answer": "Memindahkan panas ke belakang kulkas",
           "source": "Kulkas itu memindahkan panas dari makanan ke belakang kulkas. Makanya di dalam dingin, di belakang hangat."
+        },
+        {
+          "q": "Setelah menyedot panas dari makanan, cairan di dalam kulkas berubah jadi apa?",
+          "options": [
+            "Gas",
+            "Es",
+            "Air dingin",
+            "Uap panas"
+          ],
+          "answer": "Gas",
+          "source": "Di dalam, dia menyedot panas dari makanan, terus berubah jadi gas."
         }
       ],
       "mc": [
@@ -163,6 +201,17 @@
           ],
           "answer": "3 sampai 4 derajat",
           "source": "Suhu kulkas yang aman itu sekitar 3 sampai 4 derajat, freezernya minus 18 derajat."
+        },
+        {
+          "q": "Kalau kompresor berhenti, apa yang terjadi pada kulkas?",
+          "options": [
+            "Kulkas jadi nggak dingin",
+            "Kulkas jadi lebih dingin",
+            "Freezer jadi lebih dingin",
+            "Tidak terjadi apa-apa"
+          ],
+          "answer": "Kulkas jadi nggak dingin",
+          "source": "Kalau kompresor berhenti, kulkas jadi nggak dingin."
         }
       ],
       "free": [
@@ -175,6 +224,11 @@
           "q": "Di suhu ruang, bakteri bisa berlipat ganda tiap berapa menit?",
           "keyword": "20",
           "source": "Di suhu ruang, bakteri bisa berlipat ganda tiap 20 menit."
+        },
+        {
+          "q": "Apa nama bagian kulkas yang disebut jantungnya kulkas?",
+          "keyword": "kompresor",
+          "source": "Yang bikin cairan ini muter itu kompresor, jantungnya kulkas."
         }
       ]
     },
@@ -206,6 +260,17 @@
           ],
           "answer": "Skimmer",
           "source": "Air kotor disedot dari atas lewat skimmer, dan dari bawah lewat lubang drain."
+        },
+        {
+          "q": "Pompa kolam harus jalan berapa jam setiap hari di musim panas?",
+          "options": [
+            "Delapan sampai dua belas jam",
+            "Satu jam",
+            "Dua jam",
+            "Sehari penuh tanpa henti"
+          ],
+          "answer": "Delapan sampai dua belas jam",
+          "source": "Pompa harus jalan setiap hari, supaya semua air kolam kelewat filter minimal sekali, biasanya delapan sampai dua belas jam di musim panas."
         }
       ],
       "mc": [
@@ -230,6 +295,17 @@
           ],
           "answer": "Klorin",
           "source": "Filter cuma nangkep kotoran, bukan bunuh kuman. Yang bunuh kuman itu klorin."
+        },
+        {
+          "q": "Di filter pasir, kotoran nyangkut di mana?",
+          "options": [
+            "Di antara butir pasir",
+            "Di kain berlipat",
+            "Di bubuk fosil",
+            "Di keranjang pompa"
+          ],
+          "answer": "Di antara butir pasir",
+          "source": "Filter pasir, airnya lewat pasir, kotorannya nyangkut di antara butir pasir."
         }
       ],
       "free": [
@@ -242,6 +318,11 @@
           "q": "Filter DE airnya lewat bubuk apa?",
           "keyword": "fosil",
           "source": "Filter DE, airnya lewat bubuk fosil, ini yang paling halus."
+        },
+        {
+          "q": "Air kolam jadi hijau penuh apa kalau pompanya berhenti?",
+          "keyword": "lumut",
+          "source": "terus hijau penuh lumut dalam lima sampai tujuh hari."
         }
       ]
     },
@@ -273,6 +354,17 @@
           ],
           "answer": "24 foto",
           "source": "Gambarnya itu sebenernya cuma foto diam, 24 foto setiap detik."
+        },
+        {
+          "q": "Film di bioskop sekarang bentuknya apa?",
+          "options": [
+            "File di komputer yang dikunci",
+            "Rol film",
+            "Kaset",
+            "DVD"
+          ],
+          "answer": "File di komputer yang dikunci",
+          "source": "Ternyata filmnya bukan rol film lagi. Filmnya itu file di komputer yang dikunci, dan cuma bioskop ini yang punya kuncinya."
         }
       ],
       "mc": [
@@ -297,6 +389,17 @@
           ],
           "answer": "Xenon atau laser",
           "source": "Di dalam sini ada lampu super terang, xenon atau laser."
+        },
+        {
+          "q": "Kenapa tiap foto di film ditampilin dua sampai tiga kali?",
+          "options": [
+            "Biar nggak kedip kedip",
+            "Biar gambarnya lebih besar",
+            "Biar warnanya lebih terang",
+            "Biar suaranya lebih keras"
+          ],
+          "answer": "Biar nggak kedip kedip",
+          "source": "Tiap foto ditampilin dua sampai tiga kali biar nggak kedip kedip, dan otak kita yang nyambungin jadi kelihatan gerak."
         }
       ],
       "free": [
@@ -309,6 +412,11 @@
           "q": "Layar bioskop untuk film 3D warnanya apa?",
           "keyword": "silver",
           "source": "Makanya layarnya silver, bukan putih biasa."
+        },
+        {
+          "q": "Satu cermin kecil di proyektor dipakai untuk satu apa pada gambar?",
+          "keyword": "titik",
+          "source": "Cahayanya kena jutaan cermin kecil, satu cermin buat satu titik gambar."
         }
       ]
     },
@@ -340,6 +448,17 @@
           ],
           "answer": "Simpan air di tangkinya",
           "source": "Pertama, simpan air di tangkinya. Kedua, pompanya yang bangun tekanan. Ketiga, picunya yang buka pintu."
+        },
+        {
+          "q": "Kenapa semburan pistol air makin lama makin lemah?",
+          "options": [
+            "Karena airnya makin dikit dan tekanannya turun",
+            "Karena picunya rusak",
+            "Karena lubangnya membesar",
+            "Karena pompanya panas"
+          ],
+          "answer": "Karena airnya makin dikit dan tekanannya turun",
+          "source": "Tapi makin lama semburannya makin lemah, soalnya airnya makin dikit dan udaranya dapat ruang makin besar, jadi tekanannya turun."
         }
       ],
       "mc": [
@@ -364,6 +483,17 @@
           ],
           "answer": "Cuma buka satu arah biar air nggak balik lagi",
           "source": "Ini katupnya, cuma buka satu arah biar air nggak balik lagi."
+        },
+        {
+          "q": "Pompa pistol air mendorong air ke mana?",
+          "options": [
+            "Ke ruang tekanan",
+            "Ke tangki air",
+            "Ke lubang depan langsung",
+            "Ke luar pistol"
+          ],
+          "answer": "Ke ruang tekanan",
+          "source": "Ini pompanya, yang dorong air ke ruang tekanan."
         }
       ],
       "free": [
@@ -376,6 +506,11 @@
           "q": "Makin kecil lubang depan pistol air, semburannya makin apa?",
           "keyword": "jauh",
           "source": "Makin kecil lubangnya, makin cepat dan makin jauh semburannya."
+        },
+        {
+          "q": "Apa yang dipakai untuk melindungi mata saat main pistol air?",
+          "keyword": "kacamata",
+          "source": "Jangan pernah ngarahin ke muka atau mata, jaga jarak, pakai kacamata renang, dan isinya air bersih aja ya."
         }
       ]
     },
@@ -407,6 +542,17 @@
           ],
           "answer": "Magnetron",
           "source": "Gelombang ini dibikin sama alat kecil di dalam microwave, namanya magnetron."
+        },
+        {
+          "q": "Kenapa dinding microwave dibuat dari besi?",
+          "options": [
+            "Supaya gelombangnya mantul di dalam",
+            "Supaya microwave tidak panas",
+            "Supaya makanan cepat matang",
+            "Supaya pintunya kuat"
+          ],
+          "answer": "Supaya gelombangnya mantul di dalam",
+          "source": "Kenapa dinding microwave dari besi? Supaya gelombangnya mantul mantul di dalam, nggak keluar."
         }
       ],
       "mc": [
@@ -431,6 +577,17 @@
           ],
           "answer": "Supaya gelombangnya kena semua bagian makanan",
           "source": "Supaya gelombangnya kena semua bagian makanan. Kalau nggak muter, ada bagian yang panas, ada bagian yang masih dingin."
+        },
+        {
+          "q": "Kenapa tidak boleh memasukkan besi ke dalam microwave?",
+          "options": [
+            "Besi bikin gelombangnya mantul aneh, bisa muncul percikan api",
+            "Besi membuat makanan jadi dingin",
+            "Besi membuat microwave mati",
+            "Besi membuat piring pecah"
+          ],
+          "answer": "Besi bikin gelombangnya mantul aneh, bisa muncul percikan api",
+          "source": "Besi bikin gelombangnya mantul aneh, bisa muncul percikan api."
         }
       ],
       "free": [
@@ -443,14 +600,19 @@
           "q": "Dinding microwave dari besi supaya gelombangnya apa di dalam?",
           "keyword": "mantul",
           "source": "Supaya gelombangnya mantul mantul di dalam, nggak keluar."
+        },
+        {
+          "q": "Gelombang yang dipakai microwave untuk memasak namanya gelombang apa?",
+          "keyword": "mikro",
+          "source": "Microwave itu masak pakai gelombang. Gelombang yang nggak kelihatan, namanya gelombang mikro."
         }
       ]
     },
     "8": {
       "alat": "Mesin Cuci",
-      "video": "https://www.instagram.com/enzilektual/",
-      "posted": false,
-      "reel": null,
+      "video": "https://www.instagram.com/reel/Df8XXs6PJ0-/",
+      "posted": true,
+      "reel": "https://www.instagram.com/reel/Df8XXs6PJ0-/",
       "sourceScript": null,
       "end": [
         {
