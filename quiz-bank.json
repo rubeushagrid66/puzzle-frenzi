@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-21",
+  "updated": "2026-11-22",
   "targetPerSlot": 3,
   "note": "Quiz bank for Puzzle Frenzi. Only levels whose video is POSTED on @enzilektual may gain new questions; new questions must cite the final approved video script. The game falls back to the inline question when a slot is empty.",
   "levels": {
@@ -32,6 +32,17 @@
           ],
           "answer": "Karena panasnya jalan jauh, dari kawat ke permukaan baru ke panci",
           "source": "Panasnya tuh jalannya jauh banget, dari kawat dulu, ke permukaan, baru nyampe ke panci. Makanya masaknya jadi lebih lama, terus habis dimatiin pun permukaannya masih panas lama banget."
+        },
+        {
+          "q": "Apa yang terjadi pada air di panci saat panas dari kawat naik?",
+          "options": [
+            "Airnya jadi mendidih",
+            "Airnya jadi dingin",
+            "Airnya menguap semua",
+            "Airnya berubah warna"
+          ],
+          "answer": "Airnya jadi mendidih",
+          "source": "Panasnya langsung naik ke panci, airnya jadi mendidih deh."
         }
       ],
       "mc": [
@@ -56,6 +67,17 @@
           ],
           "answer": "Kawatnya menahan arus dan jadi panas sampai menyala oranye",
           "source": "pas listrik ngalir ke situ, kawatnya tuh nahan arus, dan dari situ lah muncul panasnya. Sampai kawatnya nyala oranye gitu, panas banget!"
+        },
+        {
+          "q": "Panas dari kawat sampai ke panci lewat mana dulu?",
+          "options": [
+            "Lewat permukaan kompor",
+            "Langsung ke air",
+            "Lewat udara dapur",
+            "Lewat gagang panci"
+          ],
+          "answer": "Lewat permukaan kompor",
+          "source": "Panasnya tuh jalannya jauh banget, dari kawat dulu, ke permukaan, baru nyampe ke panci."
         }
       ],
       "free": [
@@ -68,6 +90,11 @@
           "q": "Habis kompor listrik dimatikan, permukaannya masih apa lama banget?",
           "keyword": "panas",
           "source": "habis dimatiin pun permukaannya masih panas lama banget."
+        },
+        {
+          "q": "Apa warna kawat kompor listrik saat sudah panas banget?",
+          "keyword": "oranye",
+          "source": "Sampai kawatnya nyala oranye gitu, panas banget!"
         }
       ]
     },
@@ -663,6 +690,17 @@
           ],
           "answer": "Karena putaran kencang melempar air keluar dari baju",
           "source": "Putaran kenceng ini yang bikin airnya kelempar keluar dari baju. Makanya habis dicuci, baju cuma lembap, nggak basah kuyup."
+        },
+        {
+          "q": "Mesin cuci nyuci pakai tiga hal, apa saja?",
+          "options": [
+            "Air, sabun, sama putaran",
+            "Air, panas, sama sabun",
+            "Sabun, putaran, sama listrik",
+            "Air, koin, sama putaran"
+          ],
+          "answer": "Air, sabun, sama putaran",
+          "source": "Mesin cuci itu nyuci pakai tiga hal: air, sabun, sama putaran."
         }
       ],
       "mc": [
@@ -687,6 +725,17 @@
           ],
           "answer": "Dua tiga kali",
           "source": "Dibilas sampai dua tiga kali, biar sabunnya bener bener hilang."
+        },
+        {
+          "q": "Apa yang tidak boleh dimasukkan ke mesin cuci?",
+          "options": [
+            "Koin dan mainan kecil",
+            "Baju kotor",
+            "Sabun",
+            "Air bersih"
+          ],
+          "answer": "Koin dan mainan kecil",
+          "source": "jangan masukin benda aneh ke mesin cuci. Koin, mainan kecil, jangan. Bisa bikin mesin rusak."
         }
       ],
       "free": [
@@ -699,6 +748,11 @@
           "q": "Apa yang bikin kotoran lepas dari baju saat dicuci?",
           "keyword": "sabun",
           "source": "Sabun itu yang bikin kotoran lepas dari baju."
+        },
+        {
+          "q": "Baju diaduk-aduk di dalam apa saat dicuci?",
+          "keyword": "drum",
+          "source": "Terus drumnya muter. Baju diaduk aduk, dibolak balik, digesek gesek sama air sabun."
         }
       ]
     },
@@ -759,6 +813,17 @@
           ],
           "answer": "Katun",
           "source": "inline-original"
+        },
+        {
+          "q": "Apa yang keluar dari lubang kecil di pelat setrika?",
+          "options": [
+            "Uap",
+            "Air dingin",
+            "Sabun",
+            "Asap"
+          ],
+          "answer": "Uap",
+          "source": "Itu buat keluarin uap. Air dari tangki di dalam setrika jadi uap, keluar lewat lubang, terus masuk ke serat kain."
         }
       ],
       "mc": [
@@ -772,6 +837,17 @@
           ],
           "answer": "Sutra",
           "source": "inline-original"
+        },
+        {
+          "q": "Apa yang ada di dalam setrika yang bikin panas, kayak kompor kecil?",
+          "options": [
+            "Pemanas listrik",
+            "Kipas kecil",
+            "Baterai",
+            "Lampu kecil"
+          ],
+          "answer": "Pemanas listrik",
+          "source": "Di dalam setrika ada pemanas listrik, kayak kompor kecil."
         }
       ],
       "free": [
@@ -779,6 +855,11 @@
           "q": "Kain apa yang butuh suhu setrika paling tinggi?",
           "keyword": "katun",
           "source": "inline-original"
+        },
+        {
+          "q": "Apa nama pengatur suhu di setrika?",
+          "keyword": "termostat",
+          "source": "Setrika juga punya pengatur suhu, namanya termostat."
         }
       ]
     },
@@ -810,6 +891,17 @@
           ],
           "answer": "Ada empat, arahnya beda-beda",
           "source": "Terus pisaunya ada empat, arahnya beda-beda, biar semua makanan kena pisau."
+        },
+        {
+          "q": "Motor blender ada di mana?",
+          "options": [
+            "Di badan bawah",
+            "Di dalam gelas",
+            "Di tutupnya",
+            "Di pisau"
+          ],
+          "answer": "Di badan bawah",
+          "source": "Motornya ada di badan bawah, berat biar blendernya nggak jalan-jalan."
         }
       ],
       "mc": [
@@ -834,6 +926,17 @@
           ],
           "answer": "Orang dewasa",
           "source": "Terus yang ngoperasikan harus orang dewasa ya, tutupnya harus terpasang, dan tangan jauh-jauh dari pisau — bahkan saat blender mati!"
+        },
+        {
+          "q": "Apa yang terjadi kalau blender tidak ada cairannya?",
+          "options": [
+            "Makanannya diam di atas",
+            "Pisaunya berhenti",
+            "Jusnya jadi manis",
+            "Gelasnya pecah"
+          ],
+          "answer": "Makanannya diam di atas",
+          "source": "kalau nggak ada cairan makanannya diam di atas."
         }
       ],
       "free": [
@@ -846,6 +949,11 @@
           "q": "Buah utuh jadi jus halus kurang dari berapa?",
           "keyword": "semenit",
           "source": "Buah utuh jadi jus halus, kurang dari semenit!"
+        },
+        {
+          "q": "Tekan tombol blender, listrik mengalir ke mana dulu?",
+          "keyword": "motor",
+          "source": "Tekan tombolnya, listrik mengalir ke motor."
         }
       ]
     },
@@ -877,6 +985,17 @@
           ],
           "answer": "Karena sinyalnya tabrakan",
           "source": "kalau dua mobil jalurnya sama, sinyalnya tabrakan dan mobilnya jadi ngaco!"
+        },
+        {
+          "q": "Gelombang radio dari remote diterbangin lewat apa ke mobil?",
+          "options": [
+            "Udara",
+            "Kabel",
+            "Air",
+            "Cahaya lampu"
+          ],
+          "answer": "Udara",
+          "source": "Terus pesannya diterbangin lewat udara, langsung ke mobilnya!"
         }
       ],
       "mc": [
@@ -901,6 +1020,17 @@
           ],
           "answer": "Tangan kecil yang dorong roda depan biar bisa belok",
           "source": "Terus ada servo, tangan kecil yang dorong roda depannya, biar bisa belok kiri kanan."
+        },
+        {
+          "q": "Mainan remote control baru pakai frekuensi berapa supaya bisa main bareng-bareng?",
+          "options": [
+            "2,4 GHz",
+            "27 MHz",
+            "49 MHz",
+            "5 GHz"
+          ],
+          "answer": "2,4 GHz",
+          "source": "Kalau yang baru, 2,4 GHz, remotenya nyari sendiri jalur yang kosong, jadi bisa main bareng-bareng."
         }
       ],
       "free": [
@@ -913,6 +1043,11 @@
           "q": "Mobil remote control gerak tanpa apa?",
           "keyword": "kabel",
           "source": "Mobilnya bisa gerak tanpa kabel!"
+        },
+        {
+          "q": "Servo mendorong bagian mobil apa supaya bisa belok?",
+          "keyword": "roda",
+          "source": "Terus ada servo, tangan kecil yang dorong roda depannya, biar bisa belok kiri kanan."
         }
       ]
     },
@@ -933,6 +1068,17 @@
           ],
           "answer": "Supaya filamen tidak kena udara dan kebakar habis",
           "source": "Kenapa filamennya dibungkus kaca? Soalnya kalau kena udara, filamen yang panas itu langsung kebakar habis dan putus."
+        },
+        {
+          "q": "Kenapa lampu yang sudah nyala lama tidak boleh dipegang?",
+          "options": [
+            "Karena panas banget",
+            "Karena bisa meledak",
+            "Karena lampunya berat",
+            "Karena saklarnya rusak"
+          ],
+          "answer": "Karena panas banget",
+          "source": "lampu yang udah nyala lama itu panas banget, jangan dipegang."
         }
       ],
       "mc": [
@@ -946,6 +1092,17 @@
           ],
           "answer": "Pakai keping kecil yang langsung jadi cahaya, tanpa filamen panas",
           "source": "LED nggak pakai filamen panas. Dia pakai keping kecil yang langsung berubah jadi cahaya pas kena listrik."
+        },
+        {
+          "q": "Filamen lampu pijar bisa panas sampai berapa derajat?",
+          "options": [
+            "Dua ribu lima ratus derajat",
+            "Seratus derajat",
+            "Lima ratus derajat",
+            "Sepuluh derajat"
+          ],
+          "answer": "Dua ribu lima ratus derajat",
+          "source": "filamennya jadi panas banget, sampai dua ribu lima ratus derajat."
         }
       ],
       "free": [
@@ -953,6 +1110,51 @@
           "q": "Apa nama kawat kecil di dalam lampu pijar yang jadi panas dan bersinar?",
           "keyword": "filamen",
           "source": "Di dalam lampu pijar ada kawat kecil, namanya filamen."
+        },
+        {
+          "q": "Pas saklar dipencet dan pintunya kebuka, apa yang ngalir ke lampu?",
+          "keyword": "listrik",
+          "source": "Pas dipencet, pintunya langsung kebuka, listrik ngalir ke lampu."
+        }
+      ]
+    },
+    "14": {
+      "alat": "AC",
+      "video": "https://www.instagram.com/reel/DgAAN0py4UL/",
+      "posted": true,
+      "reel": "https://www.instagram.com/reel/DgAAN0py4UL/",
+      "sourceScript": "~/workspace/video/scripts/2026-11-20/script-ac.md",
+      "end": [
+        {
+          "q": "AC itu sebenarnya ngapain sama panas di kamar?",
+          "options": [
+            "Mindahin panas ke luar",
+            "Bikin dingin dari nol",
+            "Menyimpan panas di dalam kamar",
+            "Mengubah panas jadi es"
+          ],
+          "answer": "Mindahin panas ke luar",
+          "source": "AC itu nggak bikin dingin dari nol. AC cuma mindahin panas ke luar."
+        }
+      ],
+      "mc": [
+        {
+          "q": "Tiap 1 derajat lebih dingin, listrik naik berapa persen?",
+          "options": [
+            "6 persen",
+            "1 persen",
+            "10 persen",
+            "50 persen"
+          ],
+          "answer": "6 persen",
+          "source": "Tiap 1 derajat lebih dingin, listrik naik 6 persen."
+        }
+      ],
+      "free": [
+        {
+          "q": "Filter AC harus dibersihin tiap berapa?",
+          "keyword": "2 minggu",
+          "source": "filter AC harus dibersihin tiap 2 minggu."
         }
       ]
     }
