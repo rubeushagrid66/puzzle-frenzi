@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-22",
+  "updated": "2026-11-23",
   "targetPerSlot": 3,
   "note": "Quiz bank for Puzzle Frenzi. Only levels whose video is POSTED on @enzilektual may gain new questions; new questions must cite the final approved video script. The game falls back to the inline question when a slot is empty.",
   "levels": {
@@ -824,6 +824,17 @@
           ],
           "answer": "Uap",
           "source": "Itu buat keluarin uap. Air dari tangki di dalam setrika jadi uap, keluar lewat lubang, terus masuk ke serat kain."
+        },
+        {
+          "q": "Setrika bisa panas sampai berapa derajat?",
+          "options": [
+            "Dua ratus derajat",
+            "Lima puluh derajat",
+            "Seratus derajat",
+            "Tiga ratus derajat"
+          ],
+          "answer": "Dua ratus derajat",
+          "source": "setrika itu panas banget, bisa sampai dua ratus derajat."
         }
       ],
       "mc": [
@@ -848,6 +859,17 @@
           ],
           "answer": "Pemanas listrik",
           "source": "Di dalam setrika ada pemanas listrik, kayak kompor kecil."
+        },
+        {
+          "q": "Kenapa baju kusut jadi licin kena setrika panas?",
+          "options": [
+            "Karena panas bikin serat kain lemes lalu ditekan sampai lurus",
+            "Karena setrikanya berat saja",
+            "Karena bajunya basah",
+            "Karena uapnya dingin"
+          ],
+          "answer": "Karena panas bikin serat kain lemes lalu ditekan sampai lurus",
+          "source": "Setrika panas bikin seratnya lemes, terus berat setrika nekan seratnya sampai lurus lagi."
         }
       ],
       "free": [
@@ -860,6 +882,11 @@
           "q": "Apa nama pengatur suhu di setrika?",
           "keyword": "termostat",
           "source": "Setrika juga punya pengatur suhu, namanya termostat."
+        },
+        {
+          "q": "Bagian besi di bawah setrika yang nempel ke baju namanya apa?",
+          "keyword": "pelat",
+          "source": "Pelat inilah yang nempel ke baju."
         }
       ]
     },
@@ -1079,6 +1106,17 @@
           ],
           "answer": "Karena panas banget",
           "source": "lampu yang udah nyala lama itu panas banget, jangan dipegang."
+        },
+        {
+          "q": "Kenapa filamen di dalam lampu bisa nyala lama?",
+          "options": [
+            "Karena di dalam kaca tidak ada udara",
+            "Karena kacanya tebal",
+            "Karena filamennya besar",
+            "Karena saklarnya kuat"
+          ],
+          "answer": "Karena di dalam kaca tidak ada udara",
+          "source": "Di dalam kaca itu nggak ada udara, jadi filamennya bisa nyala lama."
         }
       ],
       "mc": [
@@ -1103,6 +1141,17 @@
           ],
           "answer": "Dua ribu lima ratus derajat",
           "source": "filamennya jadi panas banget, sampai dua ribu lima ratus derajat."
+        },
+        {
+          "q": "Saklar itu kayak apa buat listrik?",
+          "options": [
+            "Pintu",
+            "Jendela",
+            "Tangga",
+            "Kunci gembok"
+          ],
+          "answer": "Pintu",
+          "source": "Saklar itu kayak pintu buat listrik. Pas dipencet, pintunya langsung kebuka, listrik ngalir ke lampu."
         }
       ],
       "free": [
@@ -1115,6 +1164,11 @@
           "q": "Pas saklar dipencet dan pintunya kebuka, apa yang ngalir ke lampu?",
           "keyword": "listrik",
           "source": "Pas dipencet, pintunya langsung kebuka, listrik ngalir ke lampu."
+        },
+        {
+          "q": "Kalau lampu tidak dipakai, sebaiknya diapakan biar hemat listrik?",
+          "keyword": "matiin",
+          "source": "Dan matiin lampu kalau nggak dipakai, biar hemat listrik."
         }
       ]
     },
@@ -1135,6 +1189,17 @@
           ],
           "answer": "Mindahin panas ke luar",
           "source": "AC itu nggak bikin dingin dari nol. AC cuma mindahin panas ke luar."
+        },
+        {
+          "q": "Setel AC ke 16 derajat bikin kamar lebih cepat dingin nggak?",
+          "options": [
+            "Tidak, ACnya kerja sama cepatnya, cuma nyala lebih lama",
+            "Ya, langsung dingin",
+            "Ya, tapi cuma sebentar",
+            "Tidak, ACnya malah mati"
+          ],
+          "answer": "Tidak, ACnya kerja sama cepatnya, cuma nyala lebih lama",
+          "source": "Setel ke 16 derajat nggak bikin kamar lebih cepat dingin. ACnya kerja sama cepatnya, cuma nyala lebih lama."
         }
       ],
       "mc": [
@@ -1148,6 +1213,17 @@
           ],
           "answer": "6 persen",
           "source": "Tiap 1 derajat lebih dingin, listrik naik 6 persen."
+        },
+        {
+          "q": "Kalau AC disetel ke 16 derajat, listriknya naik berapa persen?",
+          "options": [
+            "54 persen",
+            "6 persen",
+            "25 persen",
+            "16 persen"
+          ],
+          "answer": "54 persen",
+          "source": "Kalau 16 derajat, listriknya naik 54 persen. Boros banget."
         }
       ],
       "free": [
@@ -1155,6 +1231,11 @@
           "q": "Filter AC harus dibersihin tiap berapa?",
           "keyword": "2 minggu",
           "source": "filter AC harus dibersihin tiap 2 minggu."
+        },
+        {
+          "q": "Setengah jam AC nyala, suhu kamar turun dari 32 ke berapa derajat?",
+          "keyword": "28",
+          "source": "Setengah jam, suhu turun dari 32 ke 28 derajat."
         }
       ]
     }
