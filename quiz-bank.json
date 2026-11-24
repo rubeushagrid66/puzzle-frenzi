@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-23",
+  "updated": "2026-11-24",
   "targetPerSlot": 3,
   "note": "Quiz bank for Puzzle Frenzi. Only levels whose video is POSTED on @enzilektual may gain new questions; new questions must cite the final approved video script. The game falls back to the inline question when a slot is empty.",
   "levels": {
@@ -1200,6 +1200,17 @@
           ],
           "answer": "Tidak, ACnya kerja sama cepatnya, cuma nyala lebih lama",
           "source": "Setel ke 16 derajat nggak bikin kamar lebih cepat dingin. ACnya kerja sama cepatnya, cuma nyala lebih lama."
+        },
+        {
+          "q": "Jam berapa Enzi kebangun kedinginan karena AC disetel 16 derajat?",
+          "options": [
+            "Jam 3 pagi",
+            "Jam 7 malam",
+            "Jam setengah 11 malam",
+            "Jam 12 siang"
+          ],
+          "answer": "Jam 3 pagi",
+          "source": "Jam 3 pagi, Enzi kebangun kedinginan."
         }
       ],
       "mc": [
@@ -1224,6 +1235,17 @@
           ],
           "answer": "54 persen",
           "source": "Kalau 16 derajat, listriknya naik 54 persen. Boros banget."
+        },
+        {
+          "q": "Apa yang dilakukan freon dingin di dalam AC?",
+          "options": [
+            "Menyerap panas lalu dibuang lewat kipas",
+            "Mendinginkan udara dari nol",
+            "Menyimpan panas di dalam kamar",
+            "Mengubah panas jadi es"
+          ],
+          "answer": "Menyerap panas lalu dibuang lewat kipas",
+          "source": "Freon dingin nyerap panasnya, terus dibuang lewat kipas."
         }
       ],
       "free": [
@@ -1236,6 +1258,91 @@
           "q": "Setengah jam AC nyala, suhu kamar turun dari 32 ke berapa derajat?",
           "keyword": "28",
           "source": "Setengah jam, suhu turun dari 32 ke 28 derajat."
+        },
+        {
+          "q": "AC sebaiknya disetel ke berapa derajat supaya cukup sejuk?",
+          "keyword": "25",
+          "source": "Setel AC ke 25 derajat aja, udah cukup sejuk."
+        }
+      ]
+    },
+    "15": {
+      "alat": "Pemanggang Roti",
+      "video": "https://www.instagram.com/reel/DgEQg51gUuS/",
+      "posted": true,
+      "reel": "https://www.instagram.com/reel/DgEQg51gUuS/",
+      "sourceScript": "~/workspace/video/scripts/2026-11-21/script-pemanggang-roti.md",
+      "end": [
+        {
+          "q": "Roti jadi cokelat karena apa?",
+          "options": [
+            "Gula di dalam roti berubah waktu kena panas",
+            "Rotinya gosong",
+            "Rotinya kena api",
+            "Rotinya dicat cokelat"
+          ],
+          "answer": "Gula di dalam roti berubah waktu kena panas",
+          "source": "Roti jadi cokelat bukan karena gosong, tapi karena gula di dalam roti berubah waktu kena panas."
+        }
+      ],
+      "mc": [
+        {
+          "q": "Kawat di dalam pemanggang roti ada di mana?",
+          "options": [
+            "Di kiri dan kanan roti",
+            "Di bawah meja",
+            "Di dalam colokan",
+            "Di tutupnya"
+          ],
+          "answer": "Di kiri dan kanan roti",
+          "source": "Kawatnya ada di kiri dan kanan roti, jadi dua sisinya matang bareng."
+        }
+      ],
+      "free": [
+        {
+          "q": "Roti tawar yang lembek bisa berubah jadi garing cuma dalam berapa menit?",
+          "keyword": "dua",
+          "source": "Roti tawar yang lembek bisa berubah jadi garing dan cokelat keemasan cuma dalam dua menit, tanpa api sama sekali."
+        }
+      ]
+    },
+    "16": {
+      "alat": "Penyedot Debu",
+      "video": "https://www.instagram.com/reel/DgFAk-bDIyC/",
+      "posted": true,
+      "reel": "https://www.instagram.com/reel/DgFAk-bDIyC/",
+      "sourceScript": "~/workspace/video/scripts/2026-11-22/script-penyedot-debu.md",
+      "end": [
+        {
+          "q": "Kenapa debu nggak keluar lagi lewat belakang penyedot?",
+          "options": [
+            "Karena ada kantong dan saringan yang nangkep debu",
+            "Karena debunya hilang sendiri",
+            "Karena selangnya buntu",
+            "Karena kipasnya mati"
+          ],
+          "answer": "Karena ada kantong dan saringan yang nangkep debu",
+          "source": "Karena di dalam ada kantong dan saringan yang nangkep debu, sementara udaranya yang udah bersih dibuang keluar."
+        }
+      ],
+      "mc": [
+        {
+          "q": "Kekuatan sedot penyedot debu bisa diatur buat apa?",
+          "options": [
+            "Milih lantai keramik atau karpet tebal",
+            "Milih warna penyedot",
+            "Milih lagu yang diputar",
+            "Milih ukuran kantong"
+          ],
+          "answer": "Milih lantai keramik atau karpet tebal",
+          "source": "Kekuatan sedotnya bisa diatur, ada tombol buat milih lantai keramik atau karpet tebal."
+        }
+      ],
+      "free": [
+        {
+          "q": "Yang masuk ke penyedot itu debu, yang keluar cuma apa?",
+          "keyword": "udara",
+          "source": "Jadi yang masuk itu debu, yang keluar cuma udara."
         }
       ]
     }
