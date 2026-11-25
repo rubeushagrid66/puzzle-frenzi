@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-24",
+  "updated": "2026-11-25",
   "targetPerSlot": 3,
   "note": "Quiz bank for Puzzle Frenzi. Only levels whose video is POSTED on @enzilektual may gain new questions; new questions must cite the final approved video script. The game falls back to the inline question when a slot is empty.",
   "levels": {
@@ -1283,6 +1283,17 @@
           ],
           "answer": "Gula di dalam roti berubah waktu kena panas",
           "source": "Roti jadi cokelat bukan karena gosong, tapi karena gula di dalam roti berubah waktu kena panas."
+        },
+        {
+          "q": "Makin lama roti dipanggang, warnanya jadi makin apa?",
+          "options": [
+            "Makin cokelat",
+            "Makin putih",
+            "Makin hijau",
+            "Tetap sama"
+          ],
+          "answer": "Makin cokelat",
+          "source": "Makin lama dipanggang, makin cokelat warnanya, dan makin garing rasanya."
         }
       ],
       "mc": [
@@ -1296,6 +1307,17 @@
           ],
           "answer": "Di kiri dan kanan roti",
           "source": "Kawatnya ada di kiri dan kanan roti, jadi dua sisinya matang bareng."
+        },
+        {
+          "q": "Tombol di pemanggang roti buat ngatur apa?",
+          "options": [
+            "Seberapa cokelat hasil akhirnya",
+            "Seberapa cepat roti lompat",
+            "Suhu ruangan dapur",
+            "Warna pemanggangnya"
+          ],
+          "answer": "Seberapa cokelat hasil akhirnya",
+          "source": "Makanya pemanggang punya tombol buat ngatur seberapa cokelat hasil akhirnya."
         }
       ],
       "free": [
@@ -1303,6 +1325,11 @@
           "q": "Roti tawar yang lembek bisa berubah jadi garing cuma dalam berapa menit?",
           "keyword": "dua",
           "source": "Roti tawar yang lembek bisa berubah jadi garing dan cokelat keemasan cuma dalam dua menit, tanpa api sama sekali."
+        },
+        {
+          "q": "Apa yang tidak boleh dimasukkan ke dalam pemanggang yang panas?",
+          "keyword": "jari",
+          "source": "jangan masukin jari atau sendok logam ke dalamnya."
         }
       ]
     },
@@ -1323,6 +1350,17 @@
           ],
           "answer": "Karena ada kantong dan saringan yang nangkep debu",
           "source": "Karena di dalam ada kantong dan saringan yang nangkep debu, sementara udaranya yang udah bersih dibuang keluar."
+        },
+        {
+          "q": "Apa yang tidak boleh disedot penyedot debu?",
+          "options": [
+            "Benda tajam atau basah",
+            "Debu di karpet",
+            "Kotoran di lantai",
+            "Rambut di lantai"
+          ],
+          "answer": "Benda tajam atau basah",
+          "source": "jangan nyedot benda yang tajam atau basah."
         }
       ],
       "mc": [
@@ -1336,6 +1374,17 @@
           ],
           "answer": "Milih lantai keramik atau karpet tebal",
           "source": "Kekuatan sedotnya bisa diatur, ada tombol buat milih lantai keramik atau karpet tebal."
+        },
+        {
+          "q": "Tanpa sikat, debu yang nempel dalam-dalam jadi apa?",
+          "options": [
+            "Susah banget kesedot",
+            "Langsung hilang",
+            "Jadi makin banyak",
+            "Berubah jadi udara"
+          ],
+          "answer": "Susah banget kesedot",
+          "source": "Tanpa sikat, debu yang udah nempel dalam dalam susah banget kesedot."
         }
       ],
       "free": [
@@ -1343,6 +1392,91 @@
           "q": "Yang masuk ke penyedot itu debu, yang keluar cuma apa?",
           "keyword": "udara",
           "source": "Jadi yang masuk itu debu, yang keluar cuma udara."
+        },
+        {
+          "q": "Kalau kantongnya udah penuh, minta tolong siapa buat ngosongin?",
+          "keyword": "dewasa",
+          "source": "Kalau kantongnya udah penuh, minta tolong orang dewasa buat ngosongin."
+        }
+      ]
+    },
+    "17": {
+      "alat": "Speaker Bluetooth",
+      "video": "https://www.instagram.com/enzilektual/reel/DgG1aP-Ck1K/",
+      "posted": true,
+      "reel": "https://www.instagram.com/enzilektual/reel/DgG1aP-Ck1K/",
+      "sourceScript": "~/workspace/video/scripts/2026-11-22/script-speaker-bluetooth.md",
+      "end": [
+        {
+          "q": "Kertas bundar di dalam speaker yang getar maju mundur namanya apa?",
+          "options": [
+            "Diafragma",
+            "Magnet",
+            "Kumparan",
+            "Baterai"
+          ],
+          "answer": "Diafragma",
+          "source": "Di dalam speaker ada kertas bundar yang namanya diafragma."
+        }
+      ],
+      "mc": [
+        {
+          "q": "Getar cepat-cepat bikin suara apa?",
+          "options": [
+            "Tinggi",
+            "Rendah",
+            "Pelan",
+            "Hilang"
+          ],
+          "answer": "Tinggi",
+          "source": "Getar pelan pelan bikin suara rendah, getar cepat cepat bikin suara tinggi."
+        }
+      ],
+      "free": [
+        {
+          "q": "Apa yang bikin kumparan ketarik dan kedorong magnet?",
+          "keyword": "listrik",
+          "source": "Listrik dari lagu bikin kumparan ketarik dan kedorong magnet."
+        }
+      ]
+    },
+    "18": {
+      "alat": "Dispenser Air",
+      "video": "https://www.instagram.com/enzilektual/reel/DgHlkW9jlqB/",
+      "posted": true,
+      "reel": "https://www.instagram.com/enzilektual/reel/DgHlkW9jlqB/",
+      "sourceScript": "~/workspace/video/scripts/2026-11-20/script-dispenser-air.md",
+      "end": [
+        {
+          "q": "Kenapa air panas dan air dingin nggak nyampur di dispenser?",
+          "options": [
+            "Karena dua tangkinya dipisah, masing-masing punya keran sendiri",
+            "Karena airnya dibekukan",
+            "Karena galonnya ada dua",
+            "Karena tombolnya beda warna"
+          ],
+          "answer": "Karena dua tangkinya dipisah, masing-masing punya keran sendiri",
+          "source": "Terus kenapa airnya nggak nyampur? Karena dua tangki itu dipisah, masing masing punya keran sendiri."
+        }
+      ],
+      "mc": [
+        {
+          "q": "Tangki panas manasin air pakai apa?",
+          "options": [
+            "Pemanas listrik",
+            "Api kecil",
+            "Matahari",
+            "Uap panas"
+          ],
+          "answer": "Pemanas listrik",
+          "source": "Tangki panas punya pemanas listrik, kayak ketel kecil."
+        }
+      ],
+      "free": [
+        {
+          "q": "Air dari galon turun ke mana dulu di dalam dispenser?",
+          "keyword": "tangki",
+          "source": "Air dari galon langsung turun ke dua tangki itu."
         }
       ]
     }
