@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-25",
+  "updated": "2026-11-26",
   "targetPerSlot": 3,
   "note": "Quiz bank for Puzzle Frenzi. Only levels whose video is POSTED on @enzilektual may gain new questions; new questions must cite the final approved video script. The game falls back to the inline question when a slot is empty.",
   "levels": {
@@ -1294,6 +1294,17 @@
           ],
           "answer": "Makin cokelat",
           "source": "Makin lama dipanggang, makin cokelat warnanya, dan makin garing rasanya."
+        },
+        {
+          "q": "Pemanggang roti memanggang roti tanpa apa?",
+          "options": [
+            "Api",
+            "Listrik",
+            "Kawat panas",
+            "Tombol"
+          ],
+          "answer": "Api",
+          "source": "Roti tawar yang lembek bisa berubah jadi garing dan cokelat keemasan cuma dalam dua menit, tanpa api sama sekali."
         }
       ],
       "mc": [
@@ -1318,6 +1329,17 @@
           ],
           "answer": "Seberapa cokelat hasil akhirnya",
           "source": "Makanya pemanggang punya tombol buat ngatur seberapa cokelat hasil akhirnya."
+        },
+        {
+          "q": "Kawat di dalam pemanggang jadi apa waktu dialiri listrik?",
+          "options": [
+            "Panas banget sampai membara",
+            "Dingin banget",
+            "Muter kencang",
+            "Berbunyi nyaring"
+          ],
+          "answer": "Panas banget sampai membara",
+          "source": "Di dalam pemanggang roti ada kawat yang kalau dialiri listrik jadi panas banget sampai membara"
         }
       ],
       "free": [
@@ -1330,6 +1352,11 @@
           "q": "Apa yang tidak boleh dimasukkan ke dalam pemanggang yang panas?",
           "keyword": "jari",
           "source": "jangan masukin jari atau sendok logam ke dalamnya."
+        },
+        {
+          "q": "Kalau rotinya nyangkut di pemanggang, apa yang harus dicabut dulu?",
+          "keyword": "colokan",
+          "source": "Kalau rotinya nyangkut, cabut dulu colokannya, terus minta tolong orang dewasa."
         }
       ]
     },
@@ -1361,6 +1388,17 @@
           ],
           "answer": "Benda tajam atau basah",
           "source": "jangan nyedot benda yang tajam atau basah."
+        },
+        {
+          "q": "Karpet tebal butuh sedotan yang gimana?",
+          "options": [
+            "Lebih kuat",
+            "Lebih pelan",
+            "Sama saja",
+            "Tidak perlu disedot"
+          ],
+          "answer": "Lebih kuat",
+          "source": "Karpet tebal butuh sedotan lebih kuat, lantai licin cukup yang pelan aja."
         }
       ],
       "mc": [
@@ -1385,6 +1423,17 @@
           ],
           "answer": "Susah banget kesedot",
           "source": "Tanpa sikat, debu yang udah nempel dalam dalam susah banget kesedot."
+        },
+        {
+          "q": "Apa yang ikut kesedot bareng udara yang masuk ke penyedot debu?",
+          "options": [
+            "Debu dan kotoran dari lantai dan karpet",
+            "Air bersih",
+            "Sabun",
+            "Bau wangi"
+          ],
+          "answer": "Debu dan kotoran dari lantai dan karpet",
+          "source": "Udara yang masuk ikut nyeret debu dan kotoran dari lantai dan karpet."
         }
       ],
       "free": [
@@ -1397,6 +1446,11 @@
           "q": "Kalau kantongnya udah penuh, minta tolong siapa buat ngosongin?",
           "keyword": "dewasa",
           "source": "Kalau kantongnya udah penuh, minta tolong orang dewasa buat ngosongin."
+        },
+        {
+          "q": "Apa yang tidak boleh dimasukkan ke ujung selang saat mesin penyedot sedang nyala?",
+          "keyword": "jari",
+          "source": "jangan masukin jari ke ujung selang waktu mesinnya nyala."
         }
       ]
     },
@@ -1417,6 +1471,17 @@
           ],
           "answer": "Diafragma",
           "source": "Di dalam speaker ada kertas bundar yang namanya diafragma."
+        },
+        {
+          "q": "Apa yang ada di belakang diafragma di dalam speaker?",
+          "options": [
+            "Magnet sama kumparan",
+            "Baterai besar",
+            "Kipas kecil",
+            "Lampu kecil"
+          ],
+          "answer": "Magnet sama kumparan",
+          "source": "di belakangnya ada magnet sama kumparan yang disambung kabel tipis."
         }
       ],
       "mc": [
@@ -1430,6 +1495,17 @@
           ],
           "answer": "Tinggi",
           "source": "Getar pelan pelan bikin suara rendah, getar cepat cepat bikin suara tinggi."
+        },
+        {
+          "q": "Getar yang keras bikin suaranya jadi gimana?",
+          "options": [
+            "Gede",
+            "Rendah",
+            "Pelan",
+            "Hilang"
+          ],
+          "answer": "Gede",
+          "source": "getarnya yang keras bikin suaranya gede."
         }
       ],
       "free": [
@@ -1437,6 +1513,11 @@
           "q": "Apa yang bikin kumparan ketarik dan kedorong magnet?",
           "keyword": "listrik",
           "source": "Listrik dari lagu bikin kumparan ketarik dan kedorong magnet."
+        },
+        {
+          "q": "Kalau suara speaker sudah cukup, apa yang harus dilakukan ke volumenya?",
+          "keyword": "kecilin",
+          "source": "Kalau udah cukup, kecilin aja volumenya."
         }
       ]
     },
@@ -1457,6 +1538,17 @@
           ],
           "answer": "Karena dua tangkinya dipisah, masing-masing punya keran sendiri",
           "source": "Terus kenapa airnya nggak nyampur? Karena dua tangki itu dipisah, masing masing punya keran sendiri."
+        },
+        {
+          "q": "Kenapa air dari tombol merah bisa langsung panas banget?",
+          "options": [
+            "Karena pemanasnya manasin air sampai hampir mendidih",
+            "Karena galonnya dipanaskan matahari",
+            "Karena tangkinya dibungkus api",
+            "Karena kerannya dipanaskan listrik"
+          ],
+          "answer": "Karena pemanasnya manasin air sampai hampir mendidih",
+          "source": "Listrik masuk, pemanasnya manasin air sampai hampir mendidih. Makanya air dari tombol merah bisa langsung panas banget, nggak perlu nunggu lama."
         }
       ],
       "mc": [
@@ -1470,6 +1562,17 @@
           ],
           "answer": "Pemanas listrik",
           "source": "Tangki panas punya pemanas listrik, kayak ketel kecil."
+        },
+        {
+          "q": "Mesin pendingin di tangki dingin ngapain sama panas dari air?",
+          "options": [
+            "Menyerap panasnya lalu membuangnya ke belakang",
+            "Menyimpan panasnya di dalam tangki",
+            "Mengubah panas jadi es batu",
+            "Membuang airnya ke luar"
+          ],
+          "answer": "Menyerap panasnya lalu membuangnya ke belakang",
+          "source": "Di sana ada mesin pendingin yang nyerap panas dari air, terus panasnya dibuang ke belakang dispenser."
         }
       ],
       "free": [
@@ -1477,6 +1580,91 @@
           "q": "Air dari galon turun ke mana dulu di dalam dispenser?",
           "keyword": "tangki",
           "source": "Air dari galon langsung turun ke dua tangki itu."
+        },
+        {
+          "q": "Air panas dispenser bisa bikin kulit apa?",
+          "keyword": "melepuh",
+          "source": "air panasnya bisa bikin kulit melepuh."
+        }
+      ]
+    },
+    "19": {
+      "alat": "Pompa Air",
+      "video": "https://www.instagram.com/enzilektual/reel/DgJaNpTvz0h/",
+      "posted": true,
+      "reel": "https://www.instagram.com/enzilektual/reel/DgJaNpTvz0h/",
+      "sourceScript": "~/workspace/video/scripts/2026-11-21/script-pompa-air.md",
+      "end": [
+        {
+          "q": "Yang muterin baling-baling di dalam pompa itu apa?",
+          "options": [
+            "Motor listrik",
+            "Kipas angin",
+            "Tandon air",
+            "Otomatis"
+          ],
+          "answer": "Motor listrik",
+          "source": "Yang muterin baling baling itu motor listrik."
+        }
+      ],
+      "mc": [
+        {
+          "q": "Kalau tandon sudah penuh, otomatisnya ngapain?",
+          "options": [
+            "Matiin pompa sendiri",
+            "Nyalain pompa lebih kencang",
+            "Buka keran air",
+            "Nambah air ke sumur"
+          ],
+          "answer": "Matiin pompa sendiri",
+          "source": "Kalau tandon udah penuh, otomatisnya matiin pompa sendiri"
+        }
+      ],
+      "free": [
+        {
+          "q": "Air dari sumur naik sampai ke mana?",
+          "keyword": "tandon",
+          "source": "Air dari sumur yang dalam banget bisa naik sendiri sampai ke tandon di atas rumah"
+        }
+      ]
+    },
+    "20": {
+      "alat": "Pengering Rambut",
+      "video": "https://www.instagram.com/enzilektual/reel/DgKKT7izLna/",
+      "posted": true,
+      "reel": "https://www.instagram.com/enzilektual/reel/DgKKT7izLna/",
+      "sourceScript": "~/workspace/video/scripts/2026-11-22/script-pengering-rambut.md",
+      "end": [
+        {
+          "q": "Angin dari pengering rambut jadi panas karena lewat apa dulu?",
+          "options": [
+            "Kawat panas",
+            "Kipas kecil",
+            "Tombol",
+            "Lubang udara"
+          ],
+          "answer": "Kawat panas",
+          "source": "Tapi udara itu dilewatin ke kawat panas dulu sebelum keluar, jadi anginnya berubah jadi angin panas."
+        }
+      ],
+      "mc": [
+        {
+          "q": "Angin panas bikin air di rambut berubah jadi apa?",
+          "options": [
+            "Uap",
+            "Es",
+            "Sabun",
+            "Debu"
+          ],
+          "answer": "Uap",
+          "source": "Angin panas bikin air di rambut berubah jadi uap lebih cepat."
+        }
+      ],
+      "free": [
+        {
+          "q": "Rambut basah bisa kering cuma dalam berapa?",
+          "keyword": "semenit",
+          "source": "makanya rambut bisa kering cuma dalam semenit."
         }
       ]
     }
