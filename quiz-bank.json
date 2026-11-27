@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-26",
+  "updated": "2026-11-27",
   "targetPerSlot": 3,
   "note": "Quiz bank for Puzzle Frenzi. Only levels whose video is POSTED on @enzilektual may gain new questions; new questions must cite the final approved video script. The game falls back to the inline question when a slot is empty.",
   "levels": {
@@ -1482,6 +1482,17 @@
           ],
           "answer": "Magnet sama kumparan",
           "source": "di belakangnya ada magnet sama kumparan yang disambung kabel tipis."
+        },
+        {
+          "q": "Getar pelan pelan bikin suara apa?",
+          "options": [
+            "Rendah",
+            "Tinggi",
+            "Gede",
+            "Hilang"
+          ],
+          "answer": "Rendah",
+          "source": "Getar pelan pelan bikin suara rendah, getar cepat cepat bikin suara tinggi."
         }
       ],
       "mc": [
@@ -1506,6 +1517,17 @@
           ],
           "answer": "Gede",
           "source": "getarnya yang keras bikin suaranya gede."
+        },
+        {
+          "q": "Kenapa jangan putar speaker kenceng kenceng terus?",
+          "options": [
+            "Telinga kita bisa capek dan rusak",
+            "Baterainya cepat habis",
+            "Speakernya jadi panas",
+            "Lagunya jadi pelan"
+          ],
+          "answer": "Telinga kita bisa capek dan rusak",
+          "source": "jangan putar speaker kenceng kenceng terus, telinga kita bisa capek dan rusak kalau keseringan denger suara yang terlalu gede."
         }
       ],
       "free": [
@@ -1518,6 +1540,11 @@
           "q": "Kalau suara speaker sudah cukup, apa yang harus dilakukan ke volumenya?",
           "keyword": "kecilin",
           "source": "Kalau udah cukup, kecilin aja volumenya."
+        },
+        {
+          "q": "Kumparan di dalam speaker ketarik dan kedorong sama apa?",
+          "keyword": "magnet",
+          "source": "Listrik dari lagu bikin kumparan ketarik dan kedorong magnet."
         }
       ]
     },
@@ -1549,6 +1576,17 @@
           ],
           "answer": "Karena pemanasnya manasin air sampai hampir mendidih",
           "source": "Listrik masuk, pemanasnya manasin air sampai hampir mendidih. Makanya air dari tombol merah bisa langsung panas banget, nggak perlu nunggu lama."
+        },
+        {
+          "q": "Pencet tombol biru, keran apa yang kebuka?",
+          "options": [
+            "Keran tangki dingin",
+            "Keran tangki panas",
+            "Keran galon",
+            "Tidak ada keran yang kebuka"
+          ],
+          "answer": "Keran tangki dingin",
+          "source": "Pencet merah, keran tangki panas yang kebuka. Pencet biru, keran tangki dingin yang kebuka."
         }
       ],
       "mc": [
@@ -1573,6 +1611,17 @@
           ],
           "answer": "Menyerap panasnya lalu membuangnya ke belakang",
           "source": "Di sana ada mesin pendingin yang nyerap panas dari air, terus panasnya dibuang ke belakang dispenser."
+        },
+        {
+          "q": "Kalau mau ambil air panas, harus minta tolong siapa dulu?",
+          "options": [
+            "Orang dewasa",
+            "Teman",
+            "Siapa saja",
+            "Tidak perlu minta tolong"
+          ],
+          "answer": "Orang dewasa",
+          "source": "Kalau mau ambil air panas, minta tolong orang dewasa dulu ya."
         }
       ],
       "free": [
@@ -1585,6 +1634,11 @@
           "q": "Air panas dispenser bisa bikin kulit apa?",
           "keyword": "melepuh",
           "source": "air panasnya bisa bikin kulit melepuh."
+        },
+        {
+          "q": "Air dari galon turun ke dua tangki, masing masing dijaga apa?",
+          "keyword": "suhunya",
+          "source": "Air dari galon langsung turun ke dua tangki itu, terus masing masing dijaga suhunya."
         }
       ]
     },
@@ -1605,6 +1659,17 @@
           ],
           "answer": "Motor listrik",
           "source": "Yang muterin baling baling itu motor listrik."
+        },
+        {
+          "q": "Makin kuat motor pompa, air bisa naik makin apa?",
+          "options": [
+            "Makin tinggi",
+            "Makin cepat habis",
+            "Makin dingin",
+            "Makin keruh"
+          ],
+          "answer": "Makin tinggi",
+          "source": "Makin kuat motornya, makin tinggi air bisa naik."
         }
       ],
       "mc": [
@@ -1618,6 +1683,17 @@
           ],
           "answer": "Matiin pompa sendiri",
           "source": "Kalau tandon udah penuh, otomatisnya matiin pompa sendiri"
+        },
+        {
+          "q": "Kalau air di tandon berkurang, pompa ngapain?",
+          "options": [
+            "Nyala lagi",
+            "Mati selamanya",
+            "Bunyi aneh",
+            "Pindah tempat"
+          ],
+          "answer": "Nyala lagi",
+          "source": "kalau airnya berkurang, pompa nyala lagi."
         }
       ],
       "free": [
@@ -1625,6 +1701,11 @@
           "q": "Air dari sumur naik sampai ke mana?",
           "keyword": "tandon",
           "source": "Air dari sumur yang dalam banget bisa naik sendiri sampai ke tandon di atas rumah"
+        },
+        {
+          "q": "Air itu berat dan selalu ngalir ke mana?",
+          "keyword": "bawah",
+          "source": "Air itu berat dan selalu ngalir ke bawah, jadi buat naikin air dari sumur ke tandon butuh tenaga yang kuat banget, dan tenaga itu datang dari pompa air."
         }
       ]
     },
@@ -1645,6 +1726,17 @@
           ],
           "answer": "Kawat panas",
           "source": "Tapi udara itu dilewatin ke kawat panas dulu sebelum keluar, jadi anginnya berubah jadi angin panas."
+        },
+        {
+          "q": "Kawat panas di pengering rambut sama kayak kawat di apa?",
+          "options": [
+            "Pemanggang roti",
+            "Kipas angin",
+            "Setrika",
+            "Lampu"
+          ],
+          "answer": "Pemanggang roti",
+          "source": "Kawat panasnya itu sama kayak kawat di pemanggang roti, kalau dialiri listrik dia jadi panas sampai membara."
         }
       ],
       "mc": [
@@ -1658,6 +1750,17 @@
           ],
           "answer": "Uap",
           "source": "Angin panas bikin air di rambut berubah jadi uap lebih cepat."
+        },
+        {
+          "q": "Kalau lubang udara di belakang pengering ditutup, mesinnya jadi gimana?",
+          "options": [
+            "Bisa kepanasan",
+            "Jadi lebih dingin",
+            "Mati total",
+            "Makin kencang"
+          ],
+          "answer": "Bisa kepanasan",
+          "source": "jangan nutupin lubang udara di belakangnya. Kalau udaranya nggak bisa masuk, mesinnya bisa kepanasan"
         }
       ],
       "free": [
@@ -1665,6 +1768,91 @@
           "q": "Rambut basah bisa kering cuma dalam berapa?",
           "keyword": "semenit",
           "source": "makanya rambut bisa kering cuma dalam semenit."
+        },
+        {
+          "q": "Apa yang ada di dalam pengering rambut yang niup udara kenceng?",
+          "keyword": "kipas",
+          "source": "Di dalam pengering rambut ada kipas kecil yang niup udara kenceng, sama seperti kipas angin biasa."
+        }
+      ]
+    },
+    "21": {
+      "alat": "Jam Dinding",
+      "video": "https://www.instagram.com/enzilektual/reel/DgL_EWav5f4/",
+      "posted": true,
+      "reel": "https://www.instagram.com/enzilektual/reel/DgL_EWav5f4/",
+      "sourceScript": "~/workspace/video/scripts/2026-11-23/script-jam-dinding.md",
+      "end": [
+        {
+          "q": "Roda yang kecil muter cepat buat jarum apa?",
+          "options": [
+            "Jarum detik",
+            "Jarum jam",
+            "Jarum menit",
+            "Jarum tanggal"
+          ],
+          "answer": "Jarum detik",
+          "source": "Roda yang kecil muter cepat buat jarum detik, roda yang besar muter pelan banget buat jarum jam."
+        }
+      ],
+      "mc": [
+        {
+          "q": "Kenapa jam dinding bisa jalan terus berbulan bulan?",
+          "options": [
+            "Karena motornya cuma butuh listrik sedikit banget",
+            "Karena baterainya besar",
+            "Karena rodanya berat",
+            "Karena jamnya diangin-anginkan"
+          ],
+          "answer": "Karena motornya cuma butuh listrik sedikit banget",
+          "source": "Karena motornya cuma butuh listrik sedikit banget dari baterai, jadi satu baterai kecil bisa tahan lama banget, bahkan sampai setahun lebih."
+        }
+      ],
+      "free": [
+        {
+          "q": "Baterai jam itu nggak boleh dimainin atau digigit karena isinya bahan apa?",
+          "keyword": "kimia",
+          "source": "baterai jam itu nggak boleh dimainin atau digigit, karena isinya bahan kimia yang bahaya."
+        }
+      ]
+    },
+    "22": {
+      "alat": "Televisi",
+      "video": "https://www.instagram.com/enzilektual/reel/DgMvJwlOba8/",
+      "posted": true,
+      "reel": "https://www.instagram.com/enzilektual/reel/DgMvJwlOba8/",
+      "sourceScript": "~/workspace/video/scripts/2026-11-23/script-televisi.md",
+      "end": [
+        {
+          "q": "Tiap piksel di layar televisi bisa nyala warna apa saja?",
+          "options": [
+            "Merah, hijau, dan biru",
+            "Merah dan kuning saja",
+            "Hitam dan putih saja",
+            "Ungu dan pink saja"
+          ],
+          "answer": "Merah, hijau, dan biru",
+          "source": "Tiap piksel bisa nyala merah, hijau, atau biru, dan gabungan ketiganya bisa bikin warna apa aja."
+        }
+      ],
+      "mc": [
+        {
+          "q": "Kenapa gambar di televisi kelihatan bergerak padahal cuma foto?",
+          "options": [
+            "Karena fotonya ganti super cepat, mata kita nggak bisa nangkep pergantiannya",
+            "Karena layarnya bergerak sendiri",
+            "Karena lampunya berkedip",
+            "Karena televisinya digoyang"
+          ],
+          "answer": "Karena fotonya ganti super cepat, mata kita nggak bisa nangkep pergantiannya",
+          "source": "Gambar bergerak itu sebenarnya cuma foto yang ganti ganti super cepat, sampai tiga puluh kali tiap detik. Mata kita nggak bisa nangkep pergantiannya, jadi yang kita lihat terasa seperti gerakan beneran."
+        }
+      ],
+      "free": [
+        {
+          "q": "Layar televisi dibentuk dari jutaan titik kecil yang namanya apa?",
+          "keyword": "piksel",
+          "source": "Layar televisi dibentuk dari jutaan titik kecil yang namanya piksel."
         }
       ]
     }
