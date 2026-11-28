@@ -8,7 +8,7 @@ Live: https://puzzle-frenzi.vercel.app
 
 - Tukar 2 tile bersebelahan (vertikal / horizontal saja, **tanpa diagonal**) untuk membuat 3+ item sebaris.
 - Kejar target tiap level sebelum timer habis (timer keras — waktu habis = ulang level).
-- 22 level: Kompor Induksi, Kipas Angin, Kulkas, Pompa Filter Kolam, Proyektor Bioskop, Pistol Air, Microwave, Mesin Cuci, Rice Cooker, Setrika, Blender, Mainan Remote Control, Lampu, AC, Pemanggang Roti, Penyedot Debu, Speaker Bluetooth, Dispenser Air, Pompa Air, Pengering Rambut, Jam Dinding, Televisi.
+- 23 level: Kompor Induksi, Kipas Angin, Kulkas, Pompa Filter Kolam, Proyektor Bioskop, Pistol Air, Microwave, Mesin Cuci, Rice Cooker, Setrika, Blender, Mainan Remote Control, Lampu, AC, Pemanggang Roti, Penyedot Debu, Speaker Bluetooth, Dispenser Air, Pompa Air, Pengering Rambut, Jam Dinding, Televisi, Air Fryer.
 - Tiap level selesai ada popup 1 komponen penting alat itu + kuis klaim hadiah (jawabannya cuma ada di video full-nya).
 - Tombol **Minta Waktu** (maks 2x/level): pilihan ganda +8 detik, ketik jawaban +12 detik. Timer jeda selama kuis.
 - Pangkat: Pemula → Tau → Serba Bisa. Tamat semua level: sertifikat **Teman Intelektual** + vote alat berikutnya.

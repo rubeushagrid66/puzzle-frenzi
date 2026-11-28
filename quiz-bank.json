@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-27",
+  "updated": "2026-11-28",
   "targetPerSlot": 3,
   "note": "Quiz bank for Puzzle Frenzi. Only levels whose video is POSTED on @enzilektual may gain new questions; new questions must cite the final approved video script. The game falls back to the inline question when a slot is empty.",
   "levels": {
@@ -1670,6 +1670,17 @@
           ],
           "answer": "Makin tinggi",
           "source": "Makin kuat motornya, makin tinggi air bisa naik."
+        },
+        {
+          "q": "Kenapa pompa air tidak boleh dipegang dengan tangan basah?",
+          "options": [
+            "Karena pompa pakai listrik",
+            "Karena pompanya panas",
+            "Karena airnya dingin",
+            "Karena pompanya berat"
+          ],
+          "answer": "Karena pompa pakai listrik",
+          "source": "pompa air itu pakai listrik, jadi jangan pegang pompa atau colokannya dengan tangan basah."
         }
       ],
       "mc": [
@@ -1694,6 +1705,17 @@
           ],
           "answer": "Nyala lagi",
           "source": "kalau airnya berkurang, pompa nyala lagi."
+        },
+        {
+          "q": "Apa yang ada di dalam pompa yang muter kencang dan nyedot air dari bawah?",
+          "options": [
+            "Baling-baling kecil",
+            "Motor listrik",
+            "Pipa besar",
+            "Tandon air"
+          ],
+          "answer": "Baling-baling kecil",
+          "source": "Di dalam pompa ada baling baling kecil yang muter kencang banget. Waktu baling baling itu muter, dia nyedot air dari bawah dan nyodorin airnya ke atas lewat pipa yang naik ke tandon."
         }
       ],
       "free": [
@@ -1706,6 +1728,11 @@
           "q": "Air itu berat dan selalu ngalir ke mana?",
           "keyword": "bawah",
           "source": "Air itu berat dan selalu ngalir ke bawah, jadi buat naikin air dari sumur ke tandon butuh tenaga yang kuat banget, dan tenaga itu datang dari pompa air."
+        },
+        {
+          "q": "Pompa air tidak boleh dipegang dengan tangan apa?",
+          "keyword": "basah",
+          "source": "jangan pegang pompa atau colokannya dengan tangan basah."
         }
       ]
     },
@@ -1737,6 +1764,17 @@
           ],
           "answer": "Pemanggang roti",
           "source": "Kawat panasnya itu sama kayak kawat di pemanggang roti, kalau dialiri listrik dia jadi panas sampai membara."
+        },
+        {
+          "q": "Tombol di pengering rambut buat ngatur apa?",
+          "options": [
+            "Panas dan kencengnya angin",
+            "Warna rambut",
+            "Bau rambut",
+            "Panjang rambut"
+          ],
+          "answer": "Panas dan kencengnya angin",
+          "source": "Makanya pengering rambut punya tombol buat ngatur panas dan kencengnya angin."
         }
       ],
       "mc": [
@@ -1761,6 +1799,17 @@
           ],
           "answer": "Bisa kepanasan",
           "source": "jangan nutupin lubang udara di belakangnya. Kalau udaranya nggak bisa masuk, mesinnya bisa kepanasan"
+        },
+        {
+          "q": "Makin panas anginnya, air di rambut hilang makin apa?",
+          "options": [
+            "Makin cepat",
+            "Makin lambat",
+            "Makin dingin",
+            "Tetap saja"
+          ],
+          "answer": "Makin cepat",
+          "source": "Makin panas anginnya, makin cepat airnya hilang, dan uapnya langsung kebawa pergi sama anginnya, makanya rambut bisa kering cuma dalam semenit."
         }
       ],
       "free": [
@@ -1773,6 +1822,11 @@
           "q": "Apa yang ada di dalam pengering rambut yang niup udara kenceng?",
           "keyword": "kipas",
           "source": "Di dalam pengering rambut ada kipas kecil yang niup udara kenceng, sama seperti kipas angin biasa."
+        },
+        {
+          "q": "Pengering rambut jangan dipakai dekat apa?",
+          "keyword": "air",
+          "source": "jangan pakai pengering rambut dekat air, dan jangan nutupin lubang udara di belakangnya."
         }
       ]
     },
@@ -1793,6 +1847,17 @@
           ],
           "answer": "Jarum detik",
           "source": "Roda yang kecil muter cepat buat jarum detik, roda yang besar muter pelan banget buat jarum jam."
+        },
+        {
+          "q": "Roda yang besar muter pelan banget buat jarum apa?",
+          "options": [
+            "Jarum jam",
+            "Jarum detik",
+            "Jarum menit",
+            "Jarum tanggal"
+          ],
+          "answer": "Jarum jam",
+          "source": "Roda yang kecil muter cepat buat jarum detik, roda yang besar muter pelan banget buat jarum jam."
         }
       ],
       "mc": [
@@ -1806,6 +1871,17 @@
           ],
           "answer": "Karena motornya cuma butuh listrik sedikit banget",
           "source": "Karena motornya cuma butuh listrik sedikit banget dari baterai, jadi satu baterai kecil bisa tahan lama banget, bahkan sampai setahun lebih."
+        },
+        {
+          "q": "Bunyi jam dinding itu kayak apa?",
+          "options": [
+            "Tik tik tik, teratur banget",
+            "Dug dug dug keras",
+            "Ting ting ting pelan",
+            "Tidak ada bunyinya"
+          ],
+          "answer": "Tik tik tik, teratur banget",
+          "source": "Makanya bunyi jam dinding itu tik tik tik, teratur banget."
         }
       ],
       "free": [
@@ -1813,6 +1889,11 @@
           "q": "Baterai jam itu nggak boleh dimainin atau digigit karena isinya bahan apa?",
           "keyword": "kimia",
           "source": "baterai jam itu nggak boleh dimainin atau digigit, karena isinya bahan kimia yang bahaya."
+        },
+        {
+          "q": "Tiap roda gigi nerusin apa ke roda berikutnya?",
+          "keyword": "putaran",
+          "source": "Motor itu yang muterin roda roda gigi yang saling nyangkut satu sama lain, dan tiap roda nerusin putaran ke roda berikutnya."
         }
       ]
     },
@@ -1833,6 +1914,17 @@
           ],
           "answer": "Merah, hijau, dan biru",
           "source": "Tiap piksel bisa nyala merah, hijau, atau biru, dan gabungan ketiganya bisa bikin warna apa aja."
+        },
+        {
+          "q": "Jutaan lampu kecil di layar televisi bikin apa?",
+          "options": [
+            "Gambar bergerak",
+            "Suara keras",
+            "Cahaya putih saja",
+            "Gambar diam"
+          ],
+          "answer": "Gambar bergerak",
+          "source": "Jutaan lampu kecil di layar ini bikin gambar bergerak."
         }
       ],
       "mc": [
@@ -1846,6 +1938,17 @@
           ],
           "answer": "Karena fotonya ganti super cepat, mata kita nggak bisa nangkep pergantiannya",
           "source": "Gambar bergerak itu sebenarnya cuma foto yang ganti ganti super cepat, sampai tiga puluh kali tiap detik. Mata kita nggak bisa nangkep pergantiannya, jadi yang kita lihat terasa seperti gerakan beneran."
+        },
+        {
+          "q": "Gambar di televisi kelihatan hidup padahal isinya cuma apa?",
+          "options": [
+            "Lampu kecil yang nyala mati super cepat",
+            "Foto yang diam",
+            "Kabel yang bergerak",
+            "Layar yang bergetar"
+          ],
+          "answer": "Lampu kecil yang nyala mati super cepat",
+          "source": "Makanya gambar di televisi kelihatan hidup, padahal isinya cuma lampu kecil yang nyala mati super cepat."
         }
       ],
       "free": [
@@ -1853,6 +1956,51 @@
           "q": "Layar televisi dibentuk dari jutaan titik kecil yang namanya apa?",
           "keyword": "piksel",
           "source": "Layar televisi dibentuk dari jutaan titik kecil yang namanya piksel."
+        },
+        {
+          "q": "Gambar di televisi kelihatan apa padahal isinya cuma lampu kecil yang nyala mati?",
+          "keyword": "hidup",
+          "source": "Makanya gambar di televisi kelihatan hidup, padahal isinya cuma lampu kecil yang nyala mati super cepat."
+        }
+      ]
+    },
+    "23": {
+      "alat": "Air Fryer",
+      "video": "https://www.instagram.com/enzilektual/reel/DgPos2Zq5Qj/",
+      "posted": true,
+      "reel": "https://www.instagram.com/enzilektual/reel/DgPos2Zq5Qj/",
+      "sourceScript": "~/workspace/video/scripts/2026-11-24/script-air-fryer.md",
+      "end": [
+        {
+          "q": "Air fryer itu sebenarnya alat apa?",
+          "options": [
+            "Oven mini yang masak pakai udara panas",
+            "Alat goreng biasa",
+            "Panci presto",
+            "Microwave"
+          ],
+          "answer": "Oven mini yang masak pakai udara panas",
+          "source": "Air fryer itu bukan alat goreng, dia oven mini yang masak pakai udara panas."
+        }
+      ],
+      "mc": [
+        {
+          "q": "Kenapa keranjang air fryer harus digoyang?",
+          "options": [
+            "Supaya udara panas bisa nyelip ke tengah",
+            "Supaya kentangnya dingin",
+            "Supaya keranjangnya bersih",
+            "Supaya kipasnya berhenti"
+          ],
+          "answer": "Supaya udara panas bisa nyelip ke tengah",
+          "source": "Kalau keranjangnya kepenuhan, udara panas nggak bisa nyelip ke tengah, makanya harus digoyang."
+        }
+      ],
+      "free": [
+        {
+          "q": "Air fryer motong lemak sampai berapa persen dibanding goreng biasa?",
+          "keyword": "80",
+          "source": "Air fryer motong lemak sampai 80 persen dibanding goreng biasa, minyaknya cuma satu sendok."
         }
       ]
     }
